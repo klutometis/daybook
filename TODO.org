@@ -1,3 +1,6 @@
+* DONE Multiple paragraphs in footnotes.
+  CLOSED: [2013-01-30 Wed 02:37]
+  [[http://stackoverflow.com/questions/12635519/multiple-paragraph-footnotes-in-org-mode][Thanks]]! Looks bad, though.
 * TODO You know what? Fuck it: let's collect =mitdasein=, too.
   In addition to =chrestomathy= and the old Posterous; Tweets?
 * TODO Think about [[http://www.waldenfont.com/][Walden fonts]] for titles.
