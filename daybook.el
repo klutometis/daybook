@@ -13,6 +13,6 @@
          :author "Peter Danenberg"
          :email "pcd@wikitex.org"
          :exclude "draft.*"
-         :style "<link rel=\"stylesheet\" type=\"text/css\"/ href=\"blog.css\">"
+         :style "<link rel=\"stylesheet\" type=\"text/css\"/ href=\"daybook.css\">"
          :html-table-tag "<table rules=\"groups\" frame=\"hsides\" cellpadding=\"6\">"
          )))
