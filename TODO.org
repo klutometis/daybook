@@ -1,3 +1,5 @@
 * TODO Integrate the title with the pages
 * TODO Style?
 * TODO =html= as a recursive submodule which points to =gh-pages=
+* TODO Reference the CSS properly.
+* TODO Deploy.
