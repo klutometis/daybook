@@ -4,6 +4,9 @@
 * TODO You know what? Fuck it: let's collect =mitdasein=, too.
   In addition to =chrestomathy= and the old Posterous; old
   =klutometis=; Tweets?
+
+  On the other hand: it's nice to make a break, isn't it? Old shit is
+  vaguely oppressive.
 * TODO Think about [[http://www.waldenfont.com/][Walden fonts]] for titles.
 * TODO Integrate the title with the pages
 * TODO Style?
