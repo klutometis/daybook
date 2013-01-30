@@ -1,0 +1,3 @@
+* TODO Integrate the title with the pages
+* TODO Style?
+* TODO =html= as a recursive submodule which points to =gh-pages=
