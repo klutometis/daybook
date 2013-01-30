@@ -1,0 +1,15 @@
+body {
+    counter-reset: table;
+}
+
+caption:before {
+    content: "Table " counter(table) ": ";
+}
+
+caption {
+    caption-side: bottom;
+}
+
+table {
+    counter-increment: table;
+}
