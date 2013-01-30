@@ -1,0 +1,50 @@
+Lucubration
+
+#+BEGIN_QUOTE
+I could lucubrate largely de omni scibili, but paper happily runs
+short. —Thomas Arnold, 1795–1842[fn:1]
+#+END_QUOTE
+
+The lucubrator's[fn:2] day is litrefacient,[fn:3] to be sure (e.g.
+four post- to eight ante-meridiem); but the georgical[fn:4] is
+superior (media nox to four post meridiem).[fn:5]
+
+While facient men[fn:6] prefer either to the journal[fn:7] or
+illucubrate day, one is tardy and sinister; the other, fresh and
+dextrous.
+
+* Footnotes
+
+[fn:1] Kathleen Haley gewidmet
+
+[fn:2] [a. L. /lucubrare/ ] To work by artificial light.
+
+[fn:3] [a. L. /littera/: letter, /facere/: to make] Producing words;
+  whether writing, composing or programming.\par
+  \par
+  Formed on analogy with obdurefacio [< /obdurare/ ] as opposed to,
+  say, afficio [< /affeci/ ]; on account of the strong a and first
+  conjugation.\par
+  \par
+  The elision of the medial /e/ in litera- $\to$ litra- is probably
+  illegitimate.
+
+[fn:4] [a. Gr. γεοργός husbandman] Agricultural. 1660 BURNEY Κέρδ.
+  Δῶρον (1661) 42 Men wil sweat upon certain ground in georgical
+  affairs, and venture themselves upon uncertain ground in warlike
+  exploits.
+
+[fn:5] It should be noted that Glenn Gould preferred georgical to
+  lucubratory.
+
+[fn:6] Cf. Nietzsches's /schaffender Mensch/: "Den Schaffenden hassen
+  sie am meisten: den, der Tafeln bricht und alte Werthe, den
+  Brecher - den heissen sie Verbrecher." Zarathustra, §56.\par
+  \par
+  [They hate facient man the most: he who breaks
+  tables and old values; the breaker: they nominate
+  him law-breaker.]
+
+[fn:7] [a. L. /diurnalem/ ] Diurnal. 1590 SPENSER F.Q. I. xi. 31
+  Phœbus..his faint steedes watred in Ocean deepe, Whiles from their
+  iournall labours they did rest.
