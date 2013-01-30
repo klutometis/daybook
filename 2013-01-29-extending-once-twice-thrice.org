@@ -1,0 +1,44 @@
+Extending "once, twice, thrice."
+
+Oxford [[http://oxforddictionaries.com/words/what-comes-after-once-twice-thrice][claims]] that "there is nothing after once, twice, thrice:" fuck
+that.
+
+It turns out that "once," "twice" and the like are based on the
+composition of an ancient numerical adverb with the adverbial genitive
+suffix /-s/ (see [[adverbs][table 1]]).
+
+#+CAPTION: Numerical adverbs
+#+LABEL: adverbs
+|----------------+---+--------------------+-------+---------------|
+| Ancient adverb |   | Adverbial genitive |       | Modern adverb |
+|----------------+---+--------------------+-------+---------------|
+| /ene/          | + | /-s/               | $\to$ | once          |
+| /twie/         | + | /-es/              | $\to$ | twice         |
+| /thrie/        | + | /-s/               | $\to$ | thrice        |
+|----------------+---+--------------------+-------+---------------|
+
+With a little philological /Schadenfreude/, we can continue this
+series (see [[new-adverbs][table 2]]).
+
+#+CAPTION: New numerical adverbs
+#+LABEL: new-adverbs
+|----------------+---+--------------------+-------+---------------|
+| Ancient adverb |   | Adverbial genitive |       | Modern adverb |
+|----------------+---+--------------------+-------+---------------|
+| /féower/       | + | /-s/               | $\to$ | fource        |
+| /fíf/          | + | /-es/              | $\to$ | fives         |
+| /sexe/         | + | /-es/              | $\to$ | sixes         |
+| /seofon/       | + | /-s/               | $\to$ | sevence       |
+| /ehte/         | + | /-s/               | $\to$ | eights        |
+| /neȝen/        | + | /-s/               | $\to$ | nines         |
+| /tyen/         | + | /-s/               | $\to$ | tence         |
+|----------------+---+--------------------+-------+---------------|
+
+Coming up with novel compounds is the ancient pastime of dabbling
+philologasters;[fn:1] more difficult is selling them to an
+intransigent public.
+
+* Footnotes
+
+[fn:1] "Philologaster" (a pseudo-philologist) comes from
+/philologue/ + /-aster/: a suffix expressing incomplete resemblance.
