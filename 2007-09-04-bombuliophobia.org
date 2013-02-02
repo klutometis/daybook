@@ -2,15 +2,11 @@
 
 Bombuliophobia
 
-#+BEGIN_QUOTE
-bombuliophobia, n. [< Gr. βομβυλιός, bee] Fear of bees.
-#+END_QUOTE
-
 There is a kind of gentle, absolute kith[fn:1] that kithes[fn:2] an issue
 without preventing it; and that the Hellenes nominated μοῖρα (moira).
 
 My purblind wife, for instance, in redding[fn:3] her bairn, herself stepped
-on a bee; the moral to which envoy:§ bombuliophobia.[fn:4]
+on a bee; the moral to which envoy:[fn:4] bombuliophobia.[fn:5]
 
 * Footnotes
 
@@ -33,4 +29,8 @@ I will example it.\\
 There's the moral. Now the l'envoi.\\
 (Love's Labour's Lost, III.3)
 #+END_QUOTE
+
+[fn:5] bombuliophobia, n. [< Gr. βομβυλιός, bee] Fear of bees.
+
+
 
