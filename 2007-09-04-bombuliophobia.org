@@ -1,0 +1,36 @@
+#+DATE: 2007-09-04
+
+Bombuliophobia
+
+#+BEGIN_QUOTE
+bombuliophobia, n. [< Gr. βομβυλιός, bee] Fear of bees.
+#+END_QUOTE
+
+There is a kind of gentle, absolute kith[fn:1] that kithes[fn:2] an issue
+without preventing it; and that the Hellenes nominated μοῖρα (moira).
+
+My purblind wife, for instance, in redding[fn:3] her bairn, herself stepped
+on a bee; the moral to which envoy:§ bombuliophobia.[fn:4]
+
+* Footnotes
+
+[fn:1] kith, n. (kiθ) [< G. /kund/ ] Knowledge communicated,
+information. a1400 Sir Perc. 1281 So kyndly takes he that kyth, That
+up he rose and went hym wyth.
+
+[fn:2] kithe, v. (kaið) [< G. /künden/ ] To make known. c1450 HOLLAND
+Howlat 235 Confess cleir can I nocht, nor kyth all the cass.
+
+[fn:3] redd, v. [< G. /retten/ ] To save, deliver. 1584 J. MELVILL
+Autobiog., etc. (1842) 180 Your tender King, and sweit native
+countrey, to be redde from the abbusars and misrewlares of the sam.
+
+[fn:4] The moral (argument) precedes l'envoy (conclusion):\par
+#+BEGIN_QUOTE
+I will example it.\\
+\nbsp\nbsp The fox, the ape, and the humble-bee,\\
+\nbsp\nbsp Were still at odds, being but three.\\
+There's the moral. Now the l'envoi.\\
+(Love's Labour's Lost, III.3)
+#+END_QUOTE
+
