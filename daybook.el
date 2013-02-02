@@ -17,5 +17,9 @@
          :email "pcd@wikitex.org"
          :exclude "\\(TODO\\|draft.*\\)\\.org"
          :style "<link rel=\"stylesheet\" type=\"text/css\"/ href=\"daybook.css\">"
-         :html-table-tag "<table rules=\"groups\" frame=\"hsides\" cellpadding=\"6\">")
+         :html-table-tag "<table rules=\"groups\" frame=\"hsides\" cellpadding=\"6\">"
+         :html-postamble nil
+         :sitemap-file-entry-format "%t (%d)"
+         :sitemap-date-format "%d %B %Y"
+         :sitemap-sort-files anti-chronologically)
         ("daybook" :components ("daybook-static" "daybook-content"))))
