@@ -1,0 +1,16 @@
+#+DATE: 2007-07-09
+
+Language
+
+#+BEGIN_QUOTE
+[W]ords are grown so false, I am loath to prove reason with them.
+—William Shakespeare, 1564–1616[fn:1]
+#+END_QUOTE
+
+Language is not so much inexact as it is pernicious: even after
+contrivèd limitation (confer law), there is ample room for malice or
+thoughtlessness to misconstrue.
+
+* Footnotes
+
+[fn:1] Epigraph. Twelfth Night, iii.1.
