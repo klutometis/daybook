@@ -1,3 +1,5 @@
+#+DATE: 2008-05-04
+
 Lucubration
 
 #+BEGIN_QUOTE
