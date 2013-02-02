@@ -1,6 +1,3 @@
-* DONE Multiple paragraphs in footnotes.
-  CLOSED: [2013-01-30 Wed 02:37]
-  [[http://stackoverflow.com/questions/12635519/multiple-paragraph-footnotes-in-org-mode][Thanks]]! Looks bad, though.
 * TODO You know what? Fuck it: let's collect =mitdasein=, too.
   In addition to =chrestomathy= and the old Posterous; old
   =klutometis=; Tweets?
@@ -10,6 +7,35 @@
 * TODO Think about [[http://www.waldenfont.com/][Walden fonts]] for titles.
 * TODO Integrate the title with the pages
 * TODO Style?
-* TODO =html= as a recursive submodule which points to =gh-pages=
-* TODO Reference the CSS properly.
-* TODO Deploy.
+* DONE Force publishing
+  CLOSED: [2013-02-02 Sat 02:10]
+  See [[http://orgmode.org/guide/Publishing.html][here:]]
+
+  #+BEGIN_QUOTE
+  You can override this and force publishing of all files by giving a
+  prefix argument to any of the commands above.
+  #+END_QUOTE
+
+  Also see:
+
+  - =C-c C-e C= :: Prompt for a specific project and publish all files
+                 that belong to it.
+  - =C-c C-e P= :: Publish the project containing the current file.
+  - =C-c C-e F= :: Publish only the current file.
+  - =C-c C-e E= :: Publish every project.
+* DONE Month and day
+  CLOSED: [2013-02-02 Sat 02:10]
+  See [[http://www.chicagomanualofstyle.org/16/ch09/ch09_sec032.html][CMOS]].
+* DONE Postamble
+  CLOSED: [2013-02-02 Sat 02:10]
+  =org-export-html-postamble= allows for a function, by the way, if we
+  want to do a fancy =ddate=, &c.
+* DONE Multiple paragraphs in footnotes.
+  CLOSED: [2013-01-30 Wed 02:37]
+  [[http://stackoverflow.com/questions/12635519/multiple-paragraph-footnotes-in-org-mode][Thanks]]! Looks bad, though.
+* DONE =html= as a recursive submodule which points to =gh-pages=
+  CLOSED: [2013-02-02 Sat 02:10]
+* DONE Reference the CSS properly.
+  CLOSED: [2013-02-02 Sat 02:10]
+* DONE Deploy.
+  CLOSED: [2013-02-02 Sat 02:10]
