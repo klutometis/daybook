@@ -1,0 +1,2 @@
+- Generate voronoi diagram
+- Pick random points on the Dirichlet tiles
