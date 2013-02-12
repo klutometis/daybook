@@ -1,3 +1,27 @@
+* TODO Images in sidebars, too.
+* TODO Symbols as markers instead of numbers.
+* TODO Sidenotes instead of footnotes.
+* TODO I've consistently seen folders for dates.
+* TODO Typography for the web
+  - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/][Abbreviations]] and letter-spacing
+  - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.8/][Kerning]]
+  - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.10/][Table of contents]]
+  - [[http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/][Line height]]: 1.5em, 12pt; also, headings.
+  - [[http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.1/][Opening paragraph flush left]].
+  - [[http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/][Indent subsequent paragraphs with 1em]].
+  - [[http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.3/][Margins on blockquote]]
+  - [[http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.1/][Soft hyphens]]
+  - [[http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.6/][Hard space for numbers and units]]
+  - [[http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/][Size text in ems]]:
+    #+BEGIN_SRC css
+      body { font-size:100%; }
+      h1 { font-size:2.25em;  /* 16x2.25=36 */ }
+      h2 { font-size:1.5em;   /* 16x1.5=24 */ }
+      h3 { font-size:1.125em; /* 16x1.125=18 */ }
+      h4 { font-size:0.875em; /* 16x0.875=14 */ }
+      p  { font-size:0.75em;  /* 16x0.75=12 */ }
+    #+END_SRC
+  - [[http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/][Text vs. titling figures]]
 * TODO On =(eom)=, don't link (just text).
 * TODO You know what? Fuck it: let's collect =mitdasein=, too.
   In addition to =chrestomathy= and the old Posterous; old
