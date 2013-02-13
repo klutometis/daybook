@@ -1,3 +1,11 @@
+* DONE Directory structure with dates?
+  CLOSED: [2013-02-12 Tue 18:07]
+  - CLOSING NOTE [2013-02-12 Tue 18:07] \\
+    Flat, flat; not even dates.
+  - Argues for [[http://www.esoos.com/archives/blog_optimization_and_the_flat_directory_structure.html][flat]].
+  - Also argues [[http://digwp.com/2010/07/optimizing-wordpress-permalinks/][against subdirs]]; can we dispense with dates in URLs
+    altogether?
+  - Might have a little namespace something, but that's ok.
 * TODO Images in sidebars, too.
 * TODO Symbols as markers instead of numbers.
 * TODO Sidenotes instead of footnotes.
