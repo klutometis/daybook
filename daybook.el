@@ -54,7 +54,7 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
          :footnotes t
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "klutometis' daybook (\u03c4\u03bf\u1fe6 \u1f10\u03c6\u03b7\u03bc\u03b5\u03c1\u03af\u03c2 \u03ba\u03bb\u03c5\u03c4\u03bf\u03bc\u03ae\u03c4\u03b9\u03b4\u03bf\u03c2)"
+         :sitemap-title "klutometis’ daybook"
          :author "Peter Danenberg"
          :email "pcd@wikitex.org"
          :exclude "\\(TODO\\|draft.*\\)\\.org"
