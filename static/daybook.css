@@ -5,9 +5,11 @@ html {
 body {
     counter-reset: table;
     width: 33em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-caption:before {
+table:not(.toc) caption:before {
     content: "Table " counter(table) ": ";
 }
 
@@ -17,4 +19,19 @@ caption {
 
 table {
     counter-increment: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.toc td:first-of-type {
+    text-align: right;
+}
+
+table.toc td:nth-of-type(2):before {
+    content: "\2022";
+    padding-right: 0.5em;
+}
+
+table.toc td:nth-of-type(2) {
+    font-style: italic;
 }
