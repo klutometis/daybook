@@ -1,3 +1,42 @@
+* TODO For contentless posts, can we make an option of some kind?
+  Or should we embed e.g. (eom) into the title?
+* TODO org-info-js?
+  See [[http://orgmode.org/manual/JavaScript-support.html#JavaScript-support][here]].
+* TODO Just use straight-up arrows instead of e.g. =\to=?
+* TODO Font size
+  See the [[http://otwcode.github.com/docs/front_end_coding/em-scale.html][em scale]].
+
+  This /seemed/ reasonable; but maybe we can use [[http://orgmode.org/manual/CSS-support.html][CSS support]]:
+
+  #+BEGIN_SRC css
+    /* Thanks, Richard Rutter:
+    <http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/>; also:
+    <http://alistapart.com/article/howtosizetextincss>. */
+    
+    body {
+        font-size: 1em;
+    }
+    
+    h1 {
+        font-size: 3em;
+        text-align: left;
+    }
+    
+    h2 {
+        font-size: 2.25em;
+        text-align: left;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    
+    h4 {
+        font-size: 1.125em;
+        text-align: left;
+    }
+  #+END_SRC
 * TODO Images in sidebars, too.
 * TODO Symbols as markers instead of numbers.
 * TODO Sidenotes instead of footnotes.
