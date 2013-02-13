@@ -1,4 +1,5 @@
 #+DATE: 2013-01-29
+#+OPTIONS: toc:nil num:nil
 
 Extending “once, twice, thrice”
 
@@ -39,6 +40,12 @@ series (see [[new-adverbs][table 2]]).
 Coming up with novel compounds is the ancient pastime of dabbling
 philologasters;[fn:1] more difficult is selling them to an
 intransigent public.
+
+* Addendum
+
+  It would be nice to retro-extend the series to the zeroeth element,
+  “nonce”; but that’s already been taken by a composition of “one’s”
+  genitive, /aness/, with the adverbial suffix /-s/.
 
 * Footnotes
 
