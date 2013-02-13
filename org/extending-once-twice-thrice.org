@@ -1,11 +1,11 @@
 #+DATE: 2013-01-29
 
-Extending "once, twice, thrice"
+Extending “once, twice, thrice”
 
-Oxford [[http://oxforddictionaries.com/words/what-comes-after-once-twice-thrice][claims]] that "there is nothing after once, twice, thrice:" fuck
+Oxford [[http://oxforddictionaries.com/words/what-comes-after-once-twice-thrice][claims]] that “there is nothing after once, twice, thrice:” fuck
 that.
 
-It turns out that "once," "twice" and the like are based on the
+It turns out that “once,” “twice” and the like are based on the
 composition of an ancient numerical adverb with the adverbial genitive
 suffix /-s/ (see [[adverbs][table 1]]).
 
@@ -42,5 +42,5 @@ intransigent public.
 
 * Footnotes
 
-[fn:1] "Philologaster" (a pseudo-philologist) comes from
+[fn:1] “Philologaster” (a pseudo-philologist) comes from
 /philologue/ + /-aster/: a suffix expressing incomplete resemblance.
