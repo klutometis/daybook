@@ -1,11 +1,11 @@
 (setq org-publish-project-alist
       '(("daybook-static"
-         :base-directory "~/prg/org/daybook"
+         :base-directory "~/prg/org/daybook/static"
          :publishing-directory "~/prg/org/daybook/html"
-         :base-extension "css"
+         :base-extension any
          :publishing-function org-publish-attachment)
         ("daybook-content"
-         :base-directory "~/prg/org/daybook"
+         :base-directory "~/prg/org/daybook/org"
          :publishing-directory "~/prg/org/daybook/html"
          :section-numbers t
          :table-of-contents t
