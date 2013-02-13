@@ -3,6 +3,7 @@
 * TODO Sidenotes instead of footnotes.
 * TODO I've consistently seen folders for dates.
 * TODO Typography for the web
+  - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/][33 em measure]]
   - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/][Abbreviations]] and letter-spacing
   - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.8/][Kerning]]
   - [[http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.10/][Table of contents]]
