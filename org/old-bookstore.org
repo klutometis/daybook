@@ -2,7 +2,7 @@
 
 Old bookstore
 
-I wish I could preserve the smell of the old bookstore.
+I wish I could preserve the smell of the old bookstore.[fn:2]
 
 This is my last chance to browse in a joint that doesn’t ply my
 confirmation bias with its hideous machine learning. The bookstore is
@@ -26,3 +26,4 @@ The internet has become so fucking safe.
 [fn:1] It’s a pleasure to write with the pen, incidentally, and
   propagate it to machine.
 
+[fn:2] [[http://www.yelp.com/biz/cliffs-books-pasadena][In]] [[http://www.laobserved.com/archive/2013/01/bookstore_on_the_edge_cli.php][memoriam]] [[http://www.yelp.com/biz/cliffs-books-pasadena][Cliff's]] [[https://www.facebook.com/pages/Cliffs-Books/111761895526776][Books]].
