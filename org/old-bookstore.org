@@ -1,0 +1,28 @@
+#+DATE: 2013-02-18
+
+Old bookstore
+
+I wish I could preserve the smell of the old bookstore.
+
+This is my last chance to browse in a joint that doesn’t ply my
+confirmation bias with its hideous machine learning. The bookstore is
+a random walk with simulated annealing, having honed in on interesting
+sections. It’s a good way to shake oneself out of local maxima in a
+way that, say, Amazon can’t quite.
+
+Local maxima can be social: “this is what people are reading;”
+relational: “people who read $x$ also read $y$.” What’s missing,
+however, is the long tail; the forest of parentless roots discoverable
+by the random walk.[fn:1]
+
+Old bookstores are optimized for the random walk (peregrination); and
+the random walk is missing from the bubbles of confirmation bias which
+shield us from the stochastic, the chaotic.
+
+The internet has become so fucking safe.
+
+* Footnotes
+
+[fn:1] It’s a pleasure to write with the pen, incidentally, and
+  propagate it to machine.
+
