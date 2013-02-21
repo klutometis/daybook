@@ -4,6 +4,7 @@ html {
 
 body {
     counter-reset: table;
+    counter-reset: figure;
     width: 33em;
     margin-left: auto;
     margin-right: auto;
@@ -11,6 +12,18 @@ body {
 
 table:not(.toc) caption:before {
     content: "Table " counter(table) ": ";
+}
+
+img {
+    width: 33em;
+}
+
+p > img {
+    counter-increment: figure;
+}
+
+div.figure > p + p:before {
+    content: "Figure " counter(figure) ": ";
 }
 
 caption {
