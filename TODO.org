@@ -65,6 +65,8 @@
   white) is not ideal either, as the text starts to flicker.
   Benchmark: #333 on #fff.
   #+END_QUOTE
+
+  Find [[http://www.fonts.com/search/web-fontssearchtext%3DGeorgia&SearchType%3DWebFonts&src%3DGoogleWebFonts#product_top][Georgia]].
 * TODO Images in sidebars, too.
 * TODO Symbols as markers instead of numbers.
 * TODO Sidenotes instead of footnotes.
