@@ -1,3 +1,14 @@
+* TODO No social media buttons
+  See [[http://informationarchitects.net/blog/sweep-the-sleaze/][here]].
+* TODO Font
+  From [[http://informationarchitects.net/blog/responsive-typography-the-basics/][responsive typography]]:
+
+  #+BEGIN_QUOTE
+  Initially, our claim that Georgia 16px was a good benchmark for body
+  text sizes provoked a lot of anger and even some laughter, but now
+  it’s more or less a common standard.
+  #+END_QUOTE
+* TODO Previous and next links
 * TODO For contentless posts, can we make an option of some kind?
   Or should we embed e.g. (eom) into the title?
 * TODO org-info-js?
@@ -37,6 +48,23 @@
         text-align: left;
     }
   #+END_SRC
+
+  See [[http://hn.explodie.org/writings/stop-using-small-font-size.html][16-px minimum]]; see also: [[http://informationarchitects.net/blog/100e2r][easy to read]]; and [[http://informationarchitects.net/blog/responsive-typography-the-basics/][responsive
+  typography]]:
+
+  #+BEGIN_QUOTE
+  The default HTML line height is too small. If you increase the line
+  height, the text becomes more readable. 140% leading is a good
+  benchmark.
+  #+END_QUOTE
+
+  Color:
+
+  #+BEGIN_QUOTE
+  Note: for screen design, an overly strong contrast (full black and
+  white) is not ideal either, as the text starts to flicker.
+  Benchmark: #333 on #fff.
+  #+END_QUOTE
 * TODO Images in sidebars, too.
 * TODO Symbols as markers instead of numbers.
 * TODO Sidenotes instead of footnotes.
