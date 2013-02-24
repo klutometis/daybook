@@ -1,3 +1,5 @@
+* TODO Baseline rhythm
+  See [[http://designfestival.com/understanding-baseline-rhythm-in-typography/][here]].
 * TODO Acronyms
   See [[http://designfestival.com/tracking-css-letter-spacing-and-where-to-use-it/][here]]:
 
