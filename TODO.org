@@ -1,3 +1,4 @@
+* TODO Some notion of the size of an article?
 * TODO Font scales
   See [[http://designfestival.com/achieving-good-legibility-and-readability-on-the-web/][classical vs. another vs. Fibonacci]].
 * TODO Subdirectories in =static=
