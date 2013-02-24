@@ -1,3 +1,11 @@
+* TODO Listings
+  For source code, do a little listing-prepension.
+* TODO Ligatures
+  Try [[http://chipcullen.com/ligatures/][this]]; fucks up the search engines? Who cares. Hmm; also:
+
+  #+BEGIN_SRC css
+    text-rendering: optimizeLegibility;
+  #+END_SRC
 * TODO No social media buttons
   See [[http://informationarchitects.net/blog/sweep-the-sleaze/][here]].
 * TODO Font
@@ -8,6 +16,8 @@
   text sizes provoked a lot of anger and even some laughter, but now
   it’s more or less a common standard.
   #+END_QUOTE
+
+  [[http://fontdeck.com/typeface/aster][Aster]]? [[http://fontdeck.com/typeface/monarcha][Monarcha]] does the numbers thing?
 * TODO Previous and next links
 * TODO For contentless posts, can we make an option of some kind?
   Or should we embed e.g. (eom) into the title?
