@@ -1,3 +1,5 @@
+* TODO Font scales
+  See [[http://designfestival.com/achieving-good-legibility-and-readability-on-the-web/][classical vs. another vs. Fibonacci]].
 * TODO Subdirectories in =static=
   Say, =css=; =img=; =type=.
 * TODO =@font-face=
@@ -43,6 +45,8 @@
   [[http://fontdeck.com/typeface/aster][Aster]]? [[http://fontdeck.com/typeface/monarcha][Monarcha]] does the numbers thing?
 
   Holy shit: they have [[http://www.fonts.com/font/monotype-imaging/bembo-book/complete-family-pack][Bembo]]; a [[http://www.smashingmagazine.com/2012/05/21/how-to-choose-the-right-face-for-a-beautiful-body/][few others]].
+
+  [[http://www.google.com/webfonts/specimen/Cardo][Cardo]]?
 * TODO Previous and next links
 * TODO For contentless posts, can we make an option of some kind?
   Or should we embed e.g. (eom) into the title?
