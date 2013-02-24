@@ -11,6 +11,8 @@ body {
     line-height: 1.4;
     background: #fff;
     foreground: #333;
+    font-family: 'Cardo', serif;
+    font-size: 21px;
 }
 
 table:not(.toc) caption:before {

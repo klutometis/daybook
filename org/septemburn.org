@@ -1,0 +1,10 @@
+#+DATE: 2013-02-24
+
+Septemburn
+
+We have [[http://en.wikipedia.org/wiki/Movember][Movember]] and [[http://en.wikipedia.org/wiki/Mustache_March][Mustache March]], why not Septemburn?
+
+I’ve been [[http://www.facebook.com/events/256782941107947/][scooped]], apparently:
+
+#+CAPTION: Septemburn
+[[./septemburn.jpg]]
