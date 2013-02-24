@@ -1,3 +1,7 @@
+* TODO Subdirectories in =static=
+  Say, =css=; =img=; =type=.
+* TODO =@font-face=
+  Explanation [[http://nicewebtype.com/notes/2009/10/30/how-to-use-css-font-face/][here]]; [[http://www.fontsquirrel.com/tools/webfont-generator][webfont-generator]].
 * TODO Baseline rhythm
   See [[http://designfestival.com/understanding-baseline-rhythm-in-typography/][here]].
 * TODO Acronyms
@@ -37,6 +41,8 @@
   #+END_QUOTE
 
   [[http://fontdeck.com/typeface/aster][Aster]]? [[http://fontdeck.com/typeface/monarcha][Monarcha]] does the numbers thing?
+
+  Holy shit: they have [[http://www.fonts.com/font/monotype-imaging/bembo-book/complete-family-pack][Bembo]]; a [[http://www.smashingmagazine.com/2012/05/21/how-to-choose-the-right-face-for-a-beautiful-body/][few others]].
 * TODO Previous and next links
 * TODO For contentless posts, can we make an option of some kind?
   Or should we embed e.g. (eom) into the title?
