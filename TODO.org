@@ -1,3 +1,20 @@
+* TODO Acronyms
+  See [[http://designfestival.com/tracking-css-letter-spacing-and-where-to-use-it/][here]]:
+
+  #+BEGIN_SRC css
+    acronym, .caps, abbr {
+        text-transform: lowercase;
+        font-variant: small-caps;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
+  #+END_SRC
+* TODO Text figures
+  There’s something in [[http://stackoverflow.com/questions/2940259/is-there-a-way-to-specify-the-use-of-text-or-titling-figures-in-css][CSS 3]], apparently; see [[http://dev.w3.org/csswg/css3-fonts/#propdef-font-variant-numeric][this]]:
+
+  #+BEGIN_SRC css
+    font-variant-numeric: oldstyle-nums
+  #+END_SRC
 * TODO Listings
   For source code, do a little listing-prepension.
 * TODO Ligatures
