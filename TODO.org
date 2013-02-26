@@ -1,3 +1,5 @@
+* TODO Margin notes
+* TODO Margin images
 * TODO Caption stuff
   [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg26228.html][Some comments]]; [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg26228.html][this guy]] may be closer.
 
