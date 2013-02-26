@@ -2,12 +2,11 @@
 
 Old bookstore
 
-I wish I could preserve the smell of the old bookstore (see [[cliffs][figure
-1]]).[fn:2]
+I wish I could preserve the smell of the old bookstore.[fn:2]
 
-#+CAPTION: The labyrinthine Cliff’s Books: vector of random walks
+#+CAPTION: The labyrinthine Cliff’s Books: vector of random walks (<a href="cliffs">high-res</a>)
 #+LABEL: cliffs
-[[./cliffs.jpg]]
+[[file:cliffs-small.jpg]]
 
 This is my last chance to browse in a joint that doesn’t ply my
 confirmation bias with its hideous machine learning. The bookstore is
