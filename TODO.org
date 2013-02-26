@@ -1,3 +1,120 @@
+* TODO Caption stuff
+  [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg26228.html][Some comments]]; [[http://www.mail-archive.com/emacs-orgmode@gnu.org/msg26228.html][this guy]] may be closer.
+
+  Resorted to this, for now, so I can at least pass html through:
+
+  #+BEGIN_SRC elisp
+    (defun org-export-html-format-image (src par-open)
+      "Create image tag with source and attributes."
+      (save-match-data
+        (if (string-match (regexp-quote "ltxpng/") src)
+            (format "<img src=\"%s\" alt=\"%s\"/>"
+                    src (org-find-text-property-in-string 'org-latex-src src))
+          (let* ((caption (org-find-text-property-in-string 'org-caption src))
+                 (attr (org-find-text-property-in-string 'org-attributes src))
+                 (label (org-find-text-property-in-string 'org-label src)))
+            ;; (setq caption (and caption (org-html-do-expand caption)))
+            (concat
+             (if caption
+                 (format "%s<div %sclass=\"figure\">
+    <p>"
+                         (if org-par-open "</p>\n" "")
+                         (if label (format "id=\"%s\" " (org-solidify-link-text label)) "")))
+             (format "<img src=\"%s\"%s />"
+                     src
+                     (if (string-match "\\<alt=" (or attr ""))
+                         (concat " " attr )
+                       (concat " " attr " alt=\"" src "\"")))
+             (if caption
+                 (format "</p>%s
+    </div>%s"
+                         (concat "\n<p>" caption "</p>")
+                         (if org-par-open "\n<p>" ""))))))))
+  #+END_SRC
+
+  We’re eventually going to have to modify this to take linked-images
+  with captions into account:
+
+  #+BEGIN_SRC elisp
+    (defun org-html-make-link (opt-plist type path fragment desc attr
+                                         may-inline-p)
+      "Make an HTML link.
+    OPT-PLIST is an options list.
+    TYPE is the device-type of the link (THIS://foo.html).
+    PATH is the path of the link (http://THIS#location).
+    FRAGMENT is the fragment part of the link, if any (foo.html#THIS).
+    DESC is the link description, if any.
+    ATTR is a string of other attributes of the \"a\" element.
+    MAY-INLINE-P allows inlining it as an image."
+    
+      (declare (special org-par-open))
+      (save-match-data
+        (let* ((filename path)
+               ;;First pass.  Just sanity stuff.
+               (components-1
+                (cond
+                 ((string= type "file")
+                  (list
+                   type
+                   ;;Substitute just if original path was absolute.
+                   ;;(Otherwise path must remain relative)
+                   (if (file-name-absolute-p path)
+                       (concat "file://" (expand-file-name path))
+                     path)))
+                 ((string= type "")
+                  (list nil path))
+                 (t (list type path))))
+    
+               ;;Second pass.  Components converted so they can refer
+               ;;to a remote site.
+               (components-2
+                (or
+                 (and org-html-cvt-link-fn
+                      (apply org-html-cvt-link-fn
+                             opt-plist components-1))
+                 (apply #'org-html-cvt-org-as-html
+                        opt-plist components-1)
+                 components-1))
+               (type    (first  components-2))
+               (thefile (second components-2)))
+    
+    
+          ;;Third pass.  Build final link except for leading type
+          ;;spec.
+          (cond
+           ((or
+             (not type)
+             (string= type "http")
+             (string= type "https")
+             (string= type "file")
+             (string= type "coderef"))
+            (if fragment
+                (setq thefile (concat thefile "#" fragment))))
+    
+           (t))
+    
+          ;;Final URL-build, for all types.
+          (setq thefile
+                (let
+                    ((str (org-export-html-format-href thefile)))
+                  (if (and type (not (or (string= "file" type)
+                                         (string= "coderef" type))))
+                      (concat type ":" str)
+                    str)))
+    
+          (if (and
+               may-inline-p
+               ;;Can't inline a URL with a fragment.
+               (not fragment))
+              (progn
+                (message "image %s %s" thefile org-par-open)
+                (org-export-html-format-image thefile org-par-open))
+            (concat
+             "<a href=\"" thefile "\"" (if attr (concat " " attr)) ">"
+             (org-export-html-format-desc desc)
+             "</a>")))))
+  #+END_SRC
+* TODO Make =toc:nil num:nil= default?
 * TODO Some notion of the size of an article?
 * TODO Font scales
   See [[http://designfestival.com/achieving-good-legibility-and-readability-on-the-web/][classical vs. another vs. Fibonacci]].
