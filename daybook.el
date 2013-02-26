@@ -61,7 +61,7 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
          :style "<link rel=\"stylesheet\" type=\"text/css\"/ href=\"daybook.css\"><link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>"
          :html-table-tag "<table rules=\"groups\" frame=\"hsides\" cellpadding=\"6\">"
          :html-postamble nil
-         :sitemap-date-format "‘%y %B %d"
+         :sitemap-date-format "%d %B ‘%y"
          :sitemap-sort-files anti-chronologically
          :sitemap-function publish-org-sitemap-as-table)
         ("daybook" :components ("daybook-static" "daybook-content"))))
