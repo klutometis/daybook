@@ -1,5 +1,6 @@
 #+TITLE: The bobcat holocaust
 #+DATE: 2013-02-13
+#+OPTIONS: toc:nil num:nil
 
 Around 2:00 am, I heard a violent rustling of feathers and stepped
 outside to see what was the matter; seeing nothing but a spooked
@@ -20,3 +21,12 @@ but eventually leapt the wall himself in pursuit of the neighbor’s
 hens, only to be rebuffed by his gallinaceous rival.
 
 The sole cock, bloodied and henless, is not himself.
+
+** Update
+
+We’ve since provided him with a micro-harem, and he’s taken to
+shepardship with gusto; propagating his hens from plum-trees to grass
+to corn with a paternal rigour.
+
+#+CAPTION: Bewivèd cock (<a href="bewived-cock.jpg">high-res</a>)
+[[file:bewived-cock-small.jpg]]
