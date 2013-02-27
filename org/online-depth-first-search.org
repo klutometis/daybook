@@ -1,4 +1,5 @@
 #+DATE: 2013-02-27
+#+OPTIONS: toc:nil num:nil
 
 Online depth-first-search
 
@@ -75,3 +76,9 @@ The recalibration is relatively jarring:
 
 #+CAPTION: Graph with a normalized origin after recalibration (<a href="after-calibration.png">high-res</a>)
 [[./after-calibration-small.png]]
+
+** TODO
+   - I’d like to see some graphs to corroborate those numbers
+     (distribution graphs: sorted, superimposed).
+   - Also superimposed: one run with score per minute, 
+     showing the lead-up time for depth-first vs. random walk.
