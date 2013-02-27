@@ -1,3 +1,4 @@
+* TODO =img= directory
 * TODO Margin notes
 * TODO Margin images
 * TODO Caption stuff
