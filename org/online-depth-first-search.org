@@ -40,7 +40,7 @@ choice but to designate that location origin; and construct an
 absolute map by the relative distances from that origin.
 
 Things become problematic after teleporting to a subsequent unknown
-location: one assign it origin and proceeds building a map relatively
+location: one assigns it origin and proceeds building a map relatively
 piecewise. At some point, though, chances are that the agent will
 encounter a previously encountered node ($s$) with some previously
 assigned absolute coördinate.
