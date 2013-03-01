@@ -66,15 +66,15 @@ coördinate, and recalibrating every old coördinate:
 #+END_SRC
 
 It’s apparent when recalibration is required, since paths will cross
-(see [[before-recalibration][figure 1]]).
+(see [[before-recalibration][figure 1]]); during animation, the recalibration is jarring (see
+[[after-calibration][figure 2]]).
 
 #+CAPTION: Graph with divergent origins before recalibration (<a href="before-calibration.png">high-res</a>)
 #+LABEL: before-recalibration
 [[./before-calibration-small.png]]
 
-The recalibration is relatively jarring:
-
 #+CAPTION: Graph with a normalized origin after recalibration (<a href="after-calibration.png">high-res</a>)
+#+LABEL: after-calibration
 [[./after-calibration-small.png]]
 
 ** TODO
