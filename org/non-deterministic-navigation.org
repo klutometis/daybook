@@ -1,0 +1,81 @@
+#+DATE: 2013-04-05
+
+Non-deterministic navigation
+
+[[http://aima.cs.berkeley.edu/][AIMA]] 4.12 modifies the [[online-depth-first-search.html][partially observable navigation world]], adding
+some non-determinism: when the robot moves to point $P$ to $Q$, $30\%$
+of the time it will end up at $Q'$: where $Q'$ is $P$ (it did not move
+at all) or some random $R \in N(P)$ (a random neighbor of $P$).
+
+An upshot of this non-determinism is that our transition model is no
+longer straightforward; for instance, for the following deterministic
+graph:
+
+#+ATTR_HTML: class="natural"
+#+BEGIN_SRC dot :file ../static/deterministic-graph.png
+  digraph G {
+    graph [rankdir=LR]
+    A -> B [label="α"]
+    B -> A [label="-α"]
+    A -> C [label="β"]
+    C -> A [label="-β"]
+    C -> D [label="γ"]
+    D -> C [label="-γ"]
+  }
+#+END_SRC
+
+we have this transition model:
+
+|-------+---+--------+-------+--------|
+| State |   | Action |       | Result |
+|-------+---+--------+-------+--------|
+| <c>   |   | <c>    |       | <c>    |
+| A     | + | α      | $\to$ | B      |
+| B     | + | -α     | $\to$ | A      |
+| A     | + | β      | $\to$ | C      |
+| C     | + | -β     | $\to$ | A      |
+| C     | + | γ      | $\to$ | D      |
+| D     | + | -γ     | $\to$ | C      |
+|-------+---+--------+-------+--------|
+
+Whereas, with a non-deterministic graph, we might see something like
+this (with less probable transitions dashed):
+
+#+ATTR_HTML: class="natural"
+#+BEGIN_SRC dot :file ../static/non-deterministic-graph.png
+  digraph G {
+    graph [rankdir=LR]
+    A -> B [label="α"]
+    A -> B [label="β", style=dashed]
+    A -> A [label="α", style=dashed]
+    A -> A [label="β", style=dashed]
+    B -> A [label="-α"]
+    A -> C [label="β"]
+    C -> A [label="-β"]
+    C -> A [label="γ", style=dashed]
+    C -> C [label="γ", style=dashed]
+    C -> D [label="γ"]
+    C -> D [label="-β", style=dashed]
+    D -> C [label="-γ"]
+  }
+#+END_SRC
+
+and a probabilistic transition model:
+
+|-------+---+--------+-------+--------+--------|
+| State |   | Action |       | Result |      P |
+|-------+---+--------+-------+--------+--------|
+| <c>   |   | <c>    |       | <c>    |    <r> |
+| A     | + | α      | $\to$ | B      | $0.63$ |
+| A     | + | α      | $\to$ | A      | $0.37$ |
+| A     | + | β      | $\to$ | B      | $0.10$ |
+| A     | + | β      | $\to$ | A      | $0.05$ |
+| A     | + | β      | $\to$ | C      | $0.85$ |
+| B     | + | -α     | $\to$ | A      |  $1.0$ |
+| C     | + | -β     | $\to$ | A      | $0.71$ |
+| C     | + | -β     | $\to$ | D      | $0.29$ |
+| C     | + | γ      | $\to$ | A      | $0.20$ |
+| C     | + | γ      | $\to$ | C      | $0.13$ |
+| C     | + | γ      | $\to$ | D      | $0.67$ |
+| D     | + | -γ     | $\to$ | C      |  $1.0$ |
+|-------+---+--------+-------+--------+--------|
