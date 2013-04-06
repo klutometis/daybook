@@ -2,13 +2,13 @@
 
 Non-deterministic navigation
 
-[[http://aima.cs.berkeley.edu/][AIMA]] 4.12 modifies the [[online-depth-first-search.html][partially observable navigation world]], adding
+[[http://aima.cs.berkeley.edu/][AIMA]] 4.12 modifies the [[./online-depth-first-search.html][partially observable navigation world]], adding
 some non-determinism: when the robot moves to point $P$ to $Q$, $30\%$
 of the time it will end up at $Q'$: where $Q'$ is $P$ (it did not move
 at all) or some random $R \in N(P)$ (a random neighbor of $P$).
 
 An upshot of this non-determinism is that our transition model is no
-longer straightforward; for instance, for the following deterministic
+longer straightforward; for instance, the following deterministic
 graph:
 
 #+ATTR_HTML: class="natural"
@@ -24,7 +24,7 @@ graph:
   }
 #+END_SRC
 
-we have this transition model:
+has this transition model:
 
 |-------+---+--------+-------+--------|
 | State |   | Action |       | Result |
@@ -79,3 +79,9 @@ and a probabilistic transition model:
 | C     | + | γ      | $\to$ | D      | $0.67$ |
 | D     | + | -γ     | $\to$ | C      |  $1.0$ |
 |-------+---+--------+-------+--------+--------|
+
+If we perform $α$ at $A$ and expect to be at $B$ but wind up instead
+at $C$, we can (in the presence of data) determine that a statistical
+anomaly took place and try to correct it.
+
+Compound error, &c.
