@@ -18,7 +18,7 @@ graph ([[deterministic-graph][figure 1]]):
 #+CAPTION: Deterministic graph
 #+LABEL: deterministic-graph
 #+ATTR_HTML: class="natural"
-#+BEGIN_SRC dot :file ../static/deterministic-graph.png
+#+BEGIN_SRC dot :file deterministic-graph.png
   digraph G {
     graph [rankdir=LR]
     A -> B [label="α"]
@@ -52,7 +52,7 @@ this (with less probable transitions dashed, [[non-deterministic-graph][figure 2
 #+CAPTION: Non-deterministic graph
 #+LABEL: non-deterministic-graph
 #+ATTR_HTML: class="natural"
-#+BEGIN_SRC dot :file ../static/non-deterministic-graph.png
+#+BEGIN_SRC dot :file non-deterministic-graph.png
   digraph G {
     graph [rankdir=LR]
     A -> B [label="α"]
