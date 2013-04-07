@@ -2,6 +2,10 @@
 
 Non-deterministic navigation
 
+See [[http://youtu.be/ccWbJK3ROzI][non-deterministic navigation]] in action:
+
+#+HTML: <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/ccWbJK3ROzI" frameborder="0" allowfullscreen></iframe></div>
+
 [[http://aima.cs.berkeley.edu/][AIMA]] 4.12 modifies the [[./online-depth-first-search.html][partially observable navigation world]], adding
 some non-determinism: when the robot moves to point $P$ to $Q$, $30\%$
 of the time it will end up at $Q'$: where $Q'$ is $P$ (it did not move
@@ -129,48 +133,80 @@ This is an example of why doing AI in Scheme is such a pleasure; our
 contingency stack can be a stack of lambdas that maps the current
 state to some desired state.
 
-Here’s what the contingency calculus looks like in Scheme:
+Here’s what the contingency calculus looks like in Scheme: we’ve wound
+up somewhere statistically anomolous (e.g. $C$) and should try to get
+back to where we expected to be ($B$); if we moved somewhere along the
+way, though, we first need to get back to the previous state ($A$):
 
 #+BEGIN_SRC scheme
-  (define (update-goals! previous-state expected-state state)
-    ;; Is this state statistically anomolous?
-    (unless (not-unexpected-state? expected-state state)
-      ;; Yes, it is. Pushing the expected-state onto the contingency
-      ;; stack.
-      (stack-push! contingency-plans (lambda (state) expected-state))
-      ;; Was the last move a noöp, or did we end up moving somewhere?
-      (unless (equal? previous-state state)
-        ;; Yes, we did; push the previous state onto the contingency
-        ;; stack, too.
-        (stack-push! contingency-plans (lambda (state) previous-state)))))
+  ;; Is this state (C) statistically anomolous?
+  (unless (not-unexpected-state? expected-state state)
+    ;; Yes, it is. Let's push the
+    ;; expected-state (B) onto the contingency
+    ;; stack.
+    (stack-push! contingency-plans
+                 (lambda (state) expected-state))
+    ;; Was the last move a noöp, or did we end
+    ;; up moving somewhere?
+    (unless (equal? previous-state state)
+      ;; We moved; push the previous state
+      ;; (A) onto the contingency stack,
+      ;; too.
+      (stack-push! contingency-plans
+                   (lambda (state) previous-state))))
 #+END_SRC
 
+This is the case where we don’t know how to get back to the previous
+state (e.g. $A$) from the anomolous state ($C$) and need to try random
+directions: if we wind up back at the previous state ($A$), great; if
+not, we need to get back to the anomolous state first ($C$) and try
+again:
+
 #+BEGIN_SRC scheme
-  (define (move-backwards-or-randomly expected-state state)
-    (let* ((return
-            (hash-table-ref/default
-             (hash-table-ref/default
-              state->state->actions
-              state
-              (make-hash-table))
-             expected-state
-             (make-max-heap)))
-           (return
-            (and (not (heap-empty? return))
-                 (heap-extremum return))))
-      ;; Do we know how to return?
-      (if return
-          ;; Yes; return!
-          (move state return)
-          (begin
-            ;; Nope: move randomly; and push a contingency onto the
-            ;; stack such that, if we don't end up at the expected state
-            ;; (e.g. A), we try to get back to the previous one first
-            ;; (e.g. C).
-            (stack-push! contingency-plans
-                         (lambda (state)
-                           (if (equal? state expected-state)
-                               expected-state
-                               state)))
-            (move-randomly state)))))
+  ;; Do we know how to return to the
+  ;; previous state (A)?
+  (if return
+      ;; Yes; return!
+      (move state return)
+      (begin
+        ;; Nope: move randomly; and push a
+        ;; contingency onto the stack such
+        ;; that, if we don't end up at the
+        ;; previous state (A), we try to
+        ;; get back to the anomolous one
+        ;; first (C).
+        (stack-push! contingency-plans
+                     (lambda (state)
+                       (if (equal? state expected-state)
+                           expected-state
+                           state)))
+        (move-randomly state)))
 #+END_SRC
+
+Our contingency stack is a stack of lambdas matching current states to
+desired states:
+
+$$\lambda S \to S'$$
+
+Some of the desired states are not actually contingent on the current
+state (e.g. “Get back to $A$.”); it ends up looking like this:
+
+1. $\lambda S \to S \text{ if } S = A, \text{ otherwise } C$
+2. $\lambda S \to A$
+3. $\lambda S \to B$
+
+And here’s how it looks in action: our contingency stack is two deep
+([[two-deep][figure 3]]); we successfully return to the previous state ([[return][figure 4]]);
+and thence to the desired state ([[expected-state][figure 5]]).
+
+#+CAPTION: The stack is two-deep (<a href="error-correction-1.png">high-res</a>).
+#+LABEL: two-deep
+[[./error-correction-1-small.png]]
+
+#+CAPTION: Return to the previous state (<a href="error-correction-2.png">high-res</a>).
+#+LABEL: return
+[[./error-correction-2-small.png]]
+
+#+CAPTION: Finally achieve the expected state (<a href="error-correction-3.png">high-res</a>).
+#+LABEL: expected-state
+[[./error-correction-3-small.png]]
