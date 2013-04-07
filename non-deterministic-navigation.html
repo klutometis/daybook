@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Non-deterministic navigation</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Non-deterministic navigation"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-04-05"/>
+<meta name="author" content="Peter Danenberg"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css"/ href="daybook.css"><link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Non-deterministic navigation</h1>
+
+
+<p>
+See <a href="http://youtu.be/ccWbJK3ROzI">non-deterministic navigation</a> in action:
+</p>
+
+
+<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/ccWbJK3ROzI" frameborder="0" allowfullscreen></iframe></div>
+
+<p>
+<a href="http://aima.cs.berkeley.edu/">AIMA</a> 4.12 modifies the <a href="./online-depth-first-search.html">partially observable navigation world</a>, adding
+some non-determinism: when the robot moves to point \(P\) to \(Q\), \(30\%\)
+of the time it will end up at \(Q'\): where \(Q'\) is \(P\) (it did not move
+at all) or some random \(R \in N(P)\) (a random neighbor of \(P\)).
+</p>
+<p>
+An upshot of this non-determinism is that our transition model is no
+longer straightforward; for instance, the following deterministic
+graph (<a href="#deterministic-graph">figure 1</a>):
+</p>
+
+
+
+<div id="deterministic-graph" class="figure">
+<p><img src="../static/deterministic-graph.png" class="natural" alt="../static/deterministic-graph.png" /></p>
+<p>Deterministic graph</p>
+</div>
+
+<p>
+has this transition model (<a href="#deterministic-transitions">table 1</a>):
+</p>
+<table  rules="groups" frame="hsides" cellpadding="6" id="deterministic-transitions">
+<caption>Deterministic transition model</caption>
+<colgroup><col class="center" /><col class="left" /><col class="center" /><col class="left" /><col class="center" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="center">State</th><th scope="col" class="left"></th><th scope="col" class="center">Action</th><th scope="col" class="left"></th><th scope="col" class="center">Result</th></tr>
+</thead>
+<tbody>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">α</td><td class="left">\(\to\)</td><td class="center">B</td></tr>
+<tr><td class="center">B</td><td class="left">+</td><td class="center">-α</td><td class="left">\(\to\)</td><td class="center">A</td></tr>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">β</td><td class="left">\(\to\)</td><td class="center">C</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">-β</td><td class="left">\(\to\)</td><td class="center">A</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">γ</td><td class="left">\(\to\)</td><td class="center">D</td></tr>
+<tr><td class="center">D</td><td class="left">+</td><td class="center">-γ</td><td class="left">\(\to\)</td><td class="center">C</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Whereas, with a non-deterministic graph, we might see something like
+this (with less probable transitions dashed, <a href="#non-deterministic-graph">figure 2</a>):
+</p>
+
+
+
+<div id="non-deterministic-graph" class="figure">
+<p><img src="../static/non-deterministic-graph.png" class="natural" alt="../static/non-deterministic-graph.png" /></p>
+<p>Non-deterministic graph</p>
+</div>
+
+<p>
+and a probabilistic transition model (<a href="#non-deterministic-transitions">table 2</a>):
+</p>
+<table  rules="groups" frame="hsides" cellpadding="6" id="non-deterministic-transitions">
+<caption>Non-deterministic transition model</caption>
+<colgroup><col class="center" /><col class="left" /><col class="center" /><col class="left" /><col class="center" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="center">State</th><th scope="col" class="left"></th><th scope="col" class="center">Action</th><th scope="col" class="left"></th><th scope="col" class="center">Result</th><th scope="col" class="right">P</th></tr>
+</thead>
+<tbody>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">α</td><td class="left">\(\to\)</td><td class="center">B</td><td class="right">\(0.63\)</td></tr>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">α</td><td class="left">\(\to\)</td><td class="center">A</td><td class="right">\(0.37\)</td></tr>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">β</td><td class="left">\(\to\)</td><td class="center">B</td><td class="right">\(0.10\)</td></tr>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">β</td><td class="left">\(\to\)</td><td class="center">A</td><td class="right">\(0.05\)</td></tr>
+<tr><td class="center">A</td><td class="left">+</td><td class="center">β</td><td class="left">\(\to\)</td><td class="center">C</td><td class="right">\(0.85\)</td></tr>
+<tr><td class="center">B</td><td class="left">+</td><td class="center">-α</td><td class="left">\(\to\)</td><td class="center">A</td><td class="right">\(1.0\)</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">-β</td><td class="left">\(\to\)</td><td class="center">A</td><td class="right">\(0.71\)</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">-β</td><td class="left">\(\to\)</td><td class="center">D</td><td class="right">\(0.29\)</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">γ</td><td class="left">\(\to\)</td><td class="center">A</td><td class="right">\(0.20\)</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">γ</td><td class="left">\(\to\)</td><td class="center">C</td><td class="right">\(0.13\)</td></tr>
+<tr><td class="center">C</td><td class="left">+</td><td class="center">γ</td><td class="left">\(\to\)</td><td class="center">D</td><td class="right">\(0.67\)</td></tr>
+<tr><td class="center">D</td><td class="left">+</td><td class="center">-γ</td><td class="left">\(\to\)</td><td class="center">C</td><td class="right">\(1.0\)</td></tr>
+</tbody>
+</table>
+
+
+<p>
+If we perform \(\alpha\) at \(A\) and expect to be at \(B\) but wind up instead
+at \(C\), we can (given sufficient data) determine that a statistical
+anomaly took place and try to correct it.
+</p>
+<p>
+Let’s say, for the sake of argument, that we performed \(\alpha\) at \(A\)
+in <a href="#non-deterministic-graph">figure 2</a> and expected to wind up at \(B\) but instead wound up at
+\(C\); a reasonable strategy to get back to \(B\) would be to try to get
+back to \(A\) and thence to \(B\).
+</p>
+<p>
+If we don’t have enough information to get back to \(A\), however (i.e.
+we haven’t yet discovered the path \(-\beta\) from \(C\) to \(A\)), we’re
+forced to try edges randomly from \(C\) and hope we get back to \(A\).
+</p>
+<p>
+If we try a random edge from \(C\), however, and don’t wind up back at
+\(A\), we have to try to get back to \(C\) before we can try to get back
+to \(A\) and thence to \(B\), &amp;c.
+</p>
+<p>
+In order to cope with these scenarios, we’ve introduced a notion of a
+<i>contingency stack</i>; if we have anything on the contingency stack,
+we’ll attempt to deal with it before resuming our normal goal-finding
+operations.
+</p>
+<p>
+After \(A + \alpha \to C\) above, our contingency stack looks like this:
+</p>
+<ol>
+<li>Get back to \(A\).
+</li>
+<li>Get back to \(B\).
+</li>
+</ol>
+
+
+<p>
+After we realize that we don’t know how to get back to \(A\) from \(C\),
+we’re going to try a random action and modify the contingency stack
+accordingly:
+</p>
+<ol>
+<li>Are we back at \(A\)?
+<ol>
+<li>If so, great.
+</li>
+<li>If not, get back to \(C\).
+</li>
+</ol>
+
+</li>
+<li>Get back to \(A\).
+</li>
+<li>Get back to \(B\).
+</li>
+</ol>
+
+
+<p>
+This is an example of why doing AI in Scheme is such a pleasure; our
+contingency stack can be a stack of lambdas that maps the current
+state to some desired state.
+</p>
+<p>
+Here’s what the contingency calculus looks like in Scheme: we’ve wound
+up somewhere statistically anomolous (e.g. \(C\)) and should try to get
+back to where we expected to be (\(B\)); if we moved somewhere along the
+way, though, we first need to get back to the previous state (\(A\)):
+</p>
+
+
+
+<pre class="src src-scheme"><span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Is this state (C) statistically anomolous?</span>
+(unless (not-unexpected-state? expected-state state)
+  <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Yes, it is. Let's push the</span>
+  <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">expected-state (B) onto the contingency</span>
+  <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">stack.</span>
+  (stack-push! contingency-plans
+               (<span style="color: #00cdcd; font-weight: bold;">lambda</span> (state) expected-state))
+  <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Was the last move a no&#246;p, or did we end</span>
+  <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">up moving somewhere?</span>
+  (unless (equal? previous-state state)
+    <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">We moved; push the previous state</span>
+    <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">(A) onto the contingency stack,</span>
+    <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">too.</span>
+    (stack-push! contingency-plans
+                 (<span style="color: #00cdcd; font-weight: bold;">lambda</span> (state) previous-state))))
+</pre>
+
+
+<p>
+This is the case where we don’t know how to get back to the previous
+state (e.g. \(A\)) from the anomolous state (\(C\)) and need to try random
+directions: if we wind up back at the previous state (\(A\)), great; if
+not, we need to get back to the anomolous state first (\(C\)) and try
+again:
+</p>
+
+
+
+<pre class="src src-scheme"><span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Do we know how to return to the</span>
+<span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">previous state (A)?</span>
+(<span style="color: #00cdcd; font-weight: bold;">if</span> return
+    <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Yes; return!</span>
+    (move state return)
+    (<span style="color: #00cdcd; font-weight: bold;">begin</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">Nope: move randomly; and push a</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">contingency onto the stack such</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">that, if we don't end up at the</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">previous state (A), we try to</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">get back to the anomolous one</span>
+      <span style="color: #cdcd00;">;; </span><span style="color: #cdcd00;">first (C).</span>
+      (stack-push! contingency-plans
+                   (<span style="color: #00cdcd; font-weight: bold;">lambda</span> (state)
+                     (<span style="color: #00cdcd; font-weight: bold;">if</span> (equal? state expected-state)
+                         expected-state
+                         state)))
+      (move-randomly state)))
+</pre>
+
+
+<p>
+Our contingency stack is a stack of lambdas matching current states to
+desired states:
+</p>
+
+
+$$\lambda S \to S'$$
+
+<p>
+Some of the desired states are not actually contingent on the current
+state (e.g. “Get back to \(A\).”); it ends up looking like this:
+</p>
+<ol>
+<li>\(\lambda S \to S \text{ if } S = A, \text{ otherwise } C\)
+</li>
+<li>\(\lambda S \to A\)
+</li>
+<li>\(\lambda S \to B\)
+</li>
+</ol>
+
+
+<p>
+And here’s how it looks in action: our contingency stack is two deep
+(<a href="#two-deep">figure 3</a>); we successfully return to the previous state (<a href="#return">figure 4</a>);
+and thence to the desired state (<a href="#expected-state">figure 5</a>).
+</p>
+
+<div id="two-deep" class="figure">
+<p><img src="./error-correction-1-small.png"  alt="./error-correction-1-small.png" /></p>
+<p>The stack is two-deep (<a href="error-correction-1.png">high-res</a>).</p>
+</div>
+
+
+<div id="return" class="figure">
+<p><img src="./error-correction-2-small.png"  alt="./error-correction-2-small.png" /></p>
+<p>Return to the previous state (<a href="error-correction-2.png">high-res</a>).</p>
+</div>
+
+
+<div id="expected-state" class="figure">
+<p><img src="./error-correction-3-small.png"  alt="./error-correction-3-small.png" /></p>
+<p>Finally achieve the expected state (<a href="error-correction-3.png">high-res</a>).</p>
+</div>
+</div>
+
+</body>
+</html>

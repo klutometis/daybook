@@ -19,8 +19,15 @@ table:not(.toc) caption:before {
     content: "Table " counter(table) ": ";
 }
 
+img.natural {
+    width: inherit;
+}
+
 img {
     width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 p > img {
