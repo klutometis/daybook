@@ -3,9 +3,9 @@
 
 Online depth-first-search
 
-See [[http://youtu.be/g6X05sODSQ8][online depth-first search]] in action:
+See [[http://youtu.be/g6X05sODSQ8?hd%3D1][online depth-first search]] in action:
 
-#+HTML: <div align="center"><iframe align="center" width="560" height="315" src="http://www.youtube.com/embed/g6X05sODSQ8" frameborder="0" allowfullscreen></iframe></div>
+#+HTML: <div align="center"><iframe align="center" width="560" height="315" src="http://www.youtube.com/embed/g6X05sODSQ8?hd=1" frameborder="0" allowfullscreen></iframe></div>
 
 [[http://aima.cs.berkeley.edu/][AIMA]] 4.12 plops an agent down (at an unknown location) into a world
 full of disjoint, convex polygons. The goal is to find the goal; after
