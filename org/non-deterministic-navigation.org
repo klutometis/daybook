@@ -9,8 +9,10 @@ at all) or some random $R \in N(P)$ (a random neighbor of $P$).
 
 An upshot of this non-determinism is that our transition model is no
 longer straightforward; for instance, the following deterministic
-graph:
+graph ([[deterministic-graph][figure 1]]):
 
+#+CAPTION: Deterministic graph
+#+LABEL: deterministic-graph
 #+ATTR_HTML: class="natural"
 #+BEGIN_SRC dot :file ../static/deterministic-graph.png
   digraph G {
@@ -24,8 +26,10 @@ graph:
   }
 #+END_SRC
 
-has this transition model:
+has this transition model ([[deterministic-transitions][table 1]]):
 
+#+CAPTION: Deterministic transition model
+#+LABEL: deterministic-transitions
 |-------+---+--------+-------+--------|
 | State |   | Action |       | Result |
 |-------+---+--------+-------+--------|
@@ -39,8 +43,10 @@ has this transition model:
 |-------+---+--------+-------+--------|
 
 Whereas, with a non-deterministic graph, we might see something like
-this (with less probable transitions dashed):
+this (with less probable transitions dashed, [[non-deterministic-graph][figure 2]]):
 
+#+CAPTION: Non-deterministic graph
+#+LABEL: non-deterministic-graph
 #+ATTR_HTML: class="natural"
 #+BEGIN_SRC dot :file ../static/non-deterministic-graph.png
   digraph G {
@@ -60,8 +66,10 @@ this (with less probable transitions dashed):
   }
 #+END_SRC
 
-and a probabilistic transition model:
+and a probabilistic transition model ([[non-deterministic-transitions][table 2]]):
 
+#+CAPTION: Non-deterministic transition model
+#+LABEL: non-deterministic-transitions
 |-------+---+--------+-------+--------+--------|
 | State |   | Action |       | Result |      P |
 |-------+---+--------+-------+--------+--------|
@@ -80,8 +88,89 @@ and a probabilistic transition model:
 | D     | + | -γ     | $\to$ | C      |  $1.0$ |
 |-------+---+--------+-------+--------+--------|
 
-If we perform $α$ at $A$ and expect to be at $B$ but wind up instead
-at $C$, we can (in the presence of data) determine that a statistical
+If we perform $\alpha$ at $A$ and expect to be at $B$ but wind up instead
+at $C$, we can (given sufficient data) determine that a statistical
 anomaly took place and try to correct it.
 
-Compound error, &c.
+Let’s say, for the sake of argument, that we performed $\alpha$ at $A$
+in [[non-deterministic-graph][figure 2]] and expected to wind up at $B$ but instead wound up at
+$C$; a reasonable strategy to get back to $B$ would be to try to get
+back to $A$ and thence to $B$.
+
+If we don’t have enough information to get back to $A$, however (i.e.
+we haven’t yet discovered the path $-\beta$ from $C$ to $A$), we’re
+forced to try edges randomly from $C$ and hope we get back to $A$.
+
+If we try a random edge from $C$, however, and don’t wind up back at
+$A$, we have to try to get back to $C$ before we can try to get back
+to $A$ and thence to $B$, &c.
+
+In order to cope with these scenarios, we’ve introduced a notion of a
+/contingency stack/; if we have anything on the contingency stack,
+we’ll attempt to deal with it before resuming our normal goal-finding
+operations.
+
+After $A + \alpha \to C$ above, our contingency stack looks like this:
+
+1. Get back to $A$.
+2. Get back to $B$.
+
+After we realize that we don’t know how to get back to $A$ from $C$,
+we’re going to try a random action and modify the contingency stack
+accordingly:
+
+1. Are we back at $A$?
+   1. If so, great.
+   2. If not, get back to $C$.
+2. Get back to $A$.
+3. Get back to $B$.
+
+This is an example of why doing AI in Scheme is such a pleasure; our
+contingency stack can be a stack of lambdas that maps the current
+state to some desired state.
+
+Here’s what the contingency calculus looks like in Scheme:
+
+#+BEGIN_SRC scheme
+  (define (update-goals! previous-state expected-state state)
+    ;; Is this state statistically anomolous?
+    (unless (not-unexpected-state? expected-state state)
+      ;; Yes, it is. Pushing the expected-state onto the contingency
+      ;; stack.
+      (stack-push! contingency-plans (lambda (state) expected-state))
+      ;; Was the last move a noöp, or did we end up moving somewhere?
+      (unless (equal? previous-state state)
+        ;; Yes, we did; push the previous state onto the contingency
+        ;; stack, too.
+        (stack-push! contingency-plans (lambda (state) previous-state)))))
+#+END_SRC
+
+#+BEGIN_SRC scheme
+  (define (move-backwards-or-randomly expected-state state)
+    (let* ((return
+            (hash-table-ref/default
+             (hash-table-ref/default
+              state->state->actions
+              state
+              (make-hash-table))
+             expected-state
+             (make-max-heap)))
+           (return
+            (and (not (heap-empty? return))
+                 (heap-extremum return))))
+      ;; Do we know how to return?
+      (if return
+          ;; Yes; return!
+          (move state return)
+          (begin
+            ;; Nope: move randomly; and push a contingency onto the
+            ;; stack such that, if we don't end up at the expected state
+            ;; (e.g. A), we try to get back to the previous one first
+            ;; (e.g. C).
+            (stack-push! contingency-plans
+                         (lambda (state)
+                           (if (equal? state expected-state)
+                               expected-state
+                               state)))
+            (move-randomly state)))))
+#+END_SRC
