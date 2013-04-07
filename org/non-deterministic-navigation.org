@@ -4,7 +4,7 @@ Non-deterministic navigation
 
 See [[http://youtu.be/ccWbJK3ROzI?hd%3D1][non-deterministic navigation]] in action:
 
-#+HTML: <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/ccWbJK3ROzI?hd=1" frameborder="0" allowfullscreen></iframe></div>
+#+HTML: <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/ccWbJK3ROzI?vq=hd1080" frameborder="0" allowfullscreen></iframe></div>
 
 [[http://aima.cs.berkeley.edu/][AIMA]] 4.12 modifies the [[./online-depth-first-search.html][partially observable navigation world]], adding
 some non-determinism: when the robot moves to point $P$ to $Q$, $30\%$
