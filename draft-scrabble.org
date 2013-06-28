@@ -1,0 +1,4 @@
+Plays a mean game of Scrabble, but can't beat the best players (the
+cost of e.g. challenging in the States vs. GB).
+
+DAGGADS; example game. Thought for strategies.
