@@ -29,4 +29,5 @@ shepardship with gusto; propagating his hens from plum-trees to grass
 to corn with a paternal rigour.
 
 #+CAPTION: Bewivèd cock (<a href="bewived-cock.jpg">high-res</a>)
+#+ATTR_HTML: class="figure"
 [[file:bewived-cock-small.jpg]]

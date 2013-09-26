@@ -12,6 +12,7 @@ way that, say, Amazon can’t quite.
 
 #+CAPTION: The labyrinthine Cliff’s Books: vector of random walks (<a href="cliffs">high-res</a>)
 #+LABEL: cliffs
+#+ATTR_HTML: class="figure"
 [[file:cliffs-small.jpg]]
 
 Local maxima can be social: “this is what people are reading;”
