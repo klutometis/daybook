@@ -23,7 +23,7 @@ img.natural {
     width: inherit;
 }
 
-img {
+img.figure {
     width: 33em;
     margin-left: auto;
     margin-right: auto;
