@@ -1,3 +1,4 @@
+* TODO So you want to write a SAT-solver?
 * TODO Blog on: scrabble, constraint satisfaction, oral history and documentation.
   With constraint satisfaction vs. SAT solvers, the latter can’t have
   constraints as opaque lambdas; have to be able to operate on the
