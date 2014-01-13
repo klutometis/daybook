@@ -1,0 +1,10 @@
+#+DATE: 2014-01-13
+
+Social cost of Glass: blocking communication transactions to this
+device on face; others pause to acknowledge that you’re talking to
+something (engaged in blocking voice-I/O).
+
+Consensus seems to be: wearable computing will one day be ubiquitios;
+cost of early adoption, however: conspicuity.
+
+Not merely conspicuous but also obtrusive?
