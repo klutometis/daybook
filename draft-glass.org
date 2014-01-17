@@ -8,3 +8,6 @@ Consensus seems to be: wearable computing will one day be ubiquitios;
 cost of early adoption, however: conspicuity.
 
 Not merely conspicuous but also obtrusive?
+
+Also: SMS on iPhone hack going through Google Voice SMS-to-email with
+a filter marking it as important.
