@@ -1,0 +1,22 @@
+#+TITLE: Sage
+#+DATE: 2014-02-03
+
+This self-replicating program written in 332Mb[fn:1] (or 1/14^{th} the
+size of Google’s codebase) was activated by invoking its =run=
+procedure; viz., the application of carbon-dioxide, water and photons.
+
+#+CAPTION: Self-replicating sage (<a href="sage.jpg">high-res</a>)
+#+ATTR_HTML: class="figure"
+[[file:sage-small.jpg]]
+
+All the code I’ve written (or will write) approaches not the majesty
+of this seedling: this stochastic quine which produces imperfect
+copies of itself.
+
+
+* Footnotes
+
+[fn:1] See [[http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150299/][this article]], “Transcriptome characterization and
+polymorphism detection between subspecies of big sagebrush (Artemisia
+tridentata).”
+
