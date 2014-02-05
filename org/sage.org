@@ -10,8 +10,8 @@ procedure; viz., the application of carbon-dioxide, water and photons.
 [[file:sage-small.jpg]]
 
 All the code I’ve written (or will write) approaches not the majesty
-of this seedling: this stochastic quine which produces imperfect
-copies of itself.
+of this seedling: this imperfect quine which produces approximate
+self-copies.
 
 
 * Footnotes
