@@ -64,5 +64,6 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
          :sitemap-date-format "%d %B ‘%y"
          :sitemap-sort-files anti-chronologically
          :sitemap-function publish-org-sitemap-as-table
-         :htmlized-source t)
+         :htmlized-source t
+         :publishing-function org-html-publish-to-html)
         ("daybook" :components ("daybook-static" "daybook-content"))))
