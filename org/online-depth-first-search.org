@@ -1,7 +1,6 @@
-#+DATE: 2013-02-27
+#+TITLE: Online depth-first-search
+#+DATE: <2013-02-27>
 #+OPTIONS: toc:nil num:nil
-
-Online depth-first-search
 
 See [[http://youtu.be/g6X05sODSQ8?hd%3D1][online depth-first search]] in action:
 

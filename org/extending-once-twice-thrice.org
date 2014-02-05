@@ -1,7 +1,6 @@
-#+DATE: 2013-01-29
+#+TITLE: Extending “once, twice, thrice”
+#+DATE: <2013-01-29>
 #+OPTIONS: toc:nil num:nil
-
-Extending “once, twice, thrice”
 
 Oxford [[http://oxforddictionaries.com/words/what-comes-after-once-twice-thrice][claims]] that “there is nothing after once, twice, thrice:” fuck
 that.

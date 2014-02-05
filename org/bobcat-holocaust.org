@@ -1,5 +1,5 @@
 #+TITLE: The bobcat holocaust
-#+DATE: 2013-02-13
+#+DATE: <2013-02-13>
 #+OPTIONS: toc:nil num:nil
 
 Around 2:00 am, I heard a violent rustling of feathers and stepped

@@ -1,6 +1,5 @@
-#+DATE: 2007-07-09
-
-Language
+#+TITLE: Language
+#+DATE: <2007-07-09>
 
 #+BEGIN_QUOTE
 [W]ords are grown so false, I am loath to prove reason with them.

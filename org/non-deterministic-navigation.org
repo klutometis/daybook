@@ -1,6 +1,5 @@
-#+DATE: 2013-04-05
-
-Non-deterministic navigation
+#+TITLE: Non-deterministic navigation
+#+DATE: <2013-04-05>
 
 See [[http://youtu.be/ccWbJK3ROzI?hd%3D1][non-deterministic navigation]] in action:
 

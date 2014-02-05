@@ -1,6 +1,5 @@
-#+DATE: 2008-05-04
-
-Lucubration
+#+TITLE: Lucubration
+#+DATE: <2008-05-04>
 
 #+BEGIN_QUOTE
 I could lucubrate largely de omni scibili, but paper happily runs

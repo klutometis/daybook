@@ -1,6 +1,5 @@
-#+DATE: 2013-02-18
-
-Old bookstore
+#+TITLE: Old bookstore
+#+DATE: <2013-02-18>
 
 I wish I could preserve the smell of the old bookstore.[fn:2]
 

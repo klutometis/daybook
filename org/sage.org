@@ -1,5 +1,5 @@
 #+TITLE: Sage
-#+DATE: 2014-02-03
+#+DATE: <2014-02-03>
 
 This self-replicating program written in 332Mb[fn:1] (or 1/14^{th} the
 size of Google’s codebase) was activated by invoking its =run=
