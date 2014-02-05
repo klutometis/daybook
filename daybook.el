@@ -20,7 +20,7 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
                                (or visiting (find-file sitemap-filename)))
       (erase-buffer)
       (insert (concat "#+TITLE: " sitemap-title "\n\n"))
-      (insert "#+ATTR_HTML: frame=\"void\" rules=\"none\" class=\"toc\"\n")
+      (insert "#+ATTR_HTML: :frame void :rules none :class toc\n")
       (while (setq file (pop files))
         (let ((fn (file-name-nondirectory file))
               (link (file-relative-name file dir)))
