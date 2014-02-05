@@ -34,7 +34,7 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
                             "]]"
                             " | "
                             (format-time-string
-                             org-sitemap-date-format
+                             org-publish-sitemap-date-format
                              (org-publish-find-date file))
                             " |\n")))))
       (save-buffer))
