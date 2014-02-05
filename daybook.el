@@ -59,7 +59,7 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
          :email "pcd@wikitex.org"
          :exclude "\\(TODO\\|draft.*\\)\\.org"
          :style "<link rel=\"stylesheet\" type=\"text/css\"/ href=\"daybook.css\"><link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>"
-         :html-table-tag "<table rules=\"groups\" frame=\"hsides\" cellpadding=\"6\">"
+         :html-table-attributes (:rules "groups" :frame "hsides" :cellpadding "6")
          :html-postamble nil
          :sitemap-date-format "%d %B ‘%y"
          :sitemap-sort-files anti-chronologically
