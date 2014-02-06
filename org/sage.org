@@ -1,22 +1,23 @@
 #+TITLE: Sage
 #+DATE: <2014-02-03>
 
-This self-replicating program written in 332Mb[fn:1] (or 1/14^{th} the
-size of Google’s codebase) was activated by invoking its =run=
-procedure; viz., the application of carbon-dioxide, water and photons.
+This self-replicating program written in 332 Mb[fn:1] (or 1/14^{th}
+the size of Google’s codebase) was activated by invoking its “run”
+procedure: viz., the application of carbon-dioxide, water and photons.
 
 #+CAPTION: Self-replicating sage
 #+ATTR_HTML: class="figure"
 [[file:sage.jpg][file:sage-small.jpg]]
 
 All the code I’ve written (or will write) approaches not the majesty
-of this seedling: this imperfect quine which produces approximate
-self-copies.
+of this seedling: this imperfect quine approximating self-copies.
 
 
 * Footnotes
 
-[fn:1] See [[http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150299/][this article]], “Transcriptome characterization and
+[fn:1] Prabin Bajgain et al., “Transcriptome characterization and
 polymorphism detection between subspecies of big sagebrush (Artemisia
-tridentata).”
+tridentata),” /BMC Genomics/ 12 (2011): 370,
+http://www.biomedcentral.com/1471-2164/12/370.
 
+# [[http://dx.doi.org/doi:10.1186/1471-2164-12-370][doi:10.1186/1471-2164-12-370]]

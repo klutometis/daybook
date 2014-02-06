@@ -3,8 +3,6 @@ html {
 }
 
 body {
-    counter-reset: table;
-    counter-reset: figure;
     width: 33em;
     margin-left: auto;
     margin-right: auto;
@@ -13,10 +11,6 @@ body {
     foreground: #333;
     font-family: 'Cardo', serif;
     font-size: 21px;
-}
-
-table:not(.toc) caption:before {
-    content: "Table " counter(table) ": ";
 }
 
 img.natural {
@@ -30,20 +24,11 @@ img.figure {
     display: block;
 }
 
-p > img {
-    counter-increment: figure;
-}
-
-div.figure > p + p:before {
-    content: "Figure " counter(figure) ": ";
-}
-
 caption {
     caption-side: bottom;
 }
 
 table {
-    counter-increment: table;
     margin-left: auto;
     margin-right: auto;
 }
@@ -59,4 +44,26 @@ table.toc td:nth-of-type(2):before {
 
 table.toc td:nth-of-type(2) {
     font-style: italic;
+}
+
+pre {
+    font-size: smaller;
+    background-color: #f3f5f7;
+}
+
+span.org-comment-delimiter {
+    color: #cdcd00;
+}
+
+span.org-comment {
+    color: #cdcd00;
+}
+
+span.org-keyword {
+    color: #00cdcd;
+    font-weight: bold;
+}
+
+pre.src-scheme:before {
+    content: 'Scheme';
 }
