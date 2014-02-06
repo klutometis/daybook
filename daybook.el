@@ -42,6 +42,9 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
 
 ;;; This doesn't seem to work.
 (setq org-html-table-caption-above nil)
+
+(setq org-html-htmlize-output-type 'css)
+
 (setq org-publish-project-alist
       '(("daybook-static"
          :base-directory "~/prg/org/daybook/static"
