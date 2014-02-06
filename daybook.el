@@ -40,6 +40,8 @@ Default for SITEMAP-FILENAME is 'sitemap.org'."
       (save-buffer))
     (or visiting (kill-buffer sitemap-buffer))))
 
+;;; This doesn't seem to work.
+(setq org-html-table-caption-above nil)
 (setq org-publish-project-alist
       '(("daybook-static"
          :base-directory "~/prg/org/daybook/static"
