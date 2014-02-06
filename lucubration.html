@@ -1,66 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Lucubration</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Lucubration"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2008-05-04"/>
-<meta name="author" content="Peter Danenberg"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<!-- 2014-02-05 Wed 17:28 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Peter Danenberg" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
   .title  { text-align: center; }
-  .todo   { color: red; }
+  .todo   { font-family: monospace; color: red; }
   .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
   pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
   }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
     background: #ffffcc;
   }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
-</style><link rel="stylesheet" type="text/css"/ href="daybook.css"><link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+</style>
+<link rel="stylesheet" type="text/css"/ href="daybook.css"><link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
 <script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
  {
@@ -82,7 +135,8 @@
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
     MathJax.Hub.Config({
         // Only one of the two following lines, depending on user settings
@@ -125,88 +179,80 @@
 </script>
 </head>
 <body>
-
-<div id="preamble">
-
-</div>
-
 <div id="content">
 <h1 class="title">Lucubration</h1>
-
-
 <blockquote>
-
-<p>I could lucubrate largely de omni scibili, but paper happily runs
-short. —Thomas Arnold, 1795–1842<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>
+<p>
+I could lucubrate largely de omni scibili, but paper happily runs
+short. —Thomas Arnold, 1795–1842<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>
 </p>
 </blockquote>
 
+<p>
+The lucubrator's<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> day is litrefacient,<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> to be sure (e.g.
+four post- to eight ante-meridiem); but the georgical<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup> is
+superior (media nox to four post meridiem).<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>
+</p>
 
 <p>
-The lucubrator's<sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup> day is litrefacient,<sup><a class="footref" name="fnr.3" href="#fn.3">3</a></sup> to be sure (e.g.
-four post- to eight ante-meridiem); but the georgical<sup><a class="footref" name="fnr.4" href="#fn.4">4</a></sup> is
-superior (media nox to four post meridiem).<sup><a class="footref" name="fnr.5" href="#fn.5">5</a></sup>
-</p>
-<p>
-While facient men<sup><a class="footref" name="fnr.6" href="#fn.6">6</a></sup> prefer either to the journal<sup><a class="footref" name="fnr.7" href="#fn.7">7</a></sup> or
+While facient men<sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup> prefer either to the journal<sup><a id="fnr.7" name="fnr.7" class="footref" href="#fn.7">7</a></sup> or
 illucubrate day, one is tardy and sinister; the other, fresh and
 dextrous.
 </p>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
-<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> Kathleen Haley gewidmet
-</p>
 
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Kathleen Haley gewidmet
+</p></div>
 
-<p class="footnote"><sup><a class="footnum" name="fn.2" href="#fnr.2">2</a></sup> [a. L. <i>lucubrare</i> ] To work by artificial light.
-</p>
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+[a. L. <i>lucubrare</i> ] To work by artificial light.
+</p></div>
 
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+[a. L. <i>littera</i>: letter, <i>facere</i>: to make] Producing words;
+whether writing, composing or programming.\par
+\par
+Formed on analogy with obdurefacio [< <i>obdurare</i> ] as opposed to,
+say, afficio [< <i>affeci</i> ]; on account of the strong a and first
+conjugation.\par
+\par
+The elision of the medial <i>e</i> in litera- \(\to\) litra- is probably
+illegitimate.
+</p></div>
 
-<p class="footnote"><sup><a class="footnum" name="fn.3" href="#fnr.3">3</a></sup> [a. L. <i>littera</i>: letter, <i>facere</i>: to make] Producing words;
-  whether writing, composing or programming.</p ><p >
-  </p ><p >
-  Formed on analogy with obdurefacio [&lt; <i>obdurare</i> ] as opposed to,
-  say, afficio [&lt; <i>affeci</i> ]; on account of the strong a and first
-  conjugation.</p ><p >
-  </p ><p >
-  The elision of the medial <i>e</i> in litera- \(\to\) litra- is probably
-  illegitimate.
-</p>
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+[a. Gr. γεοργός husbandman] Agricultural. 1660 BURNEY Κέρδ.
+Δῶρον (1661) 42 Men wil sweat upon certain ground in georgical
+affairs, and venture themselves upon uncertain ground in warlike
+exploits.
+</p></div>
 
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+It should be noted that Glenn Gould preferred georgical to
+lucubratory.
+</p></div>
 
-<p class="footnote"><sup><a class="footnum" name="fn.4" href="#fnr.4">4</a></sup> [a. Gr. γεοργός husbandman] Agricultural. 1660 BURNEY Κέρδ.
-  Δῶρον (1661) 42 Men wil sweat upon certain ground in georgical
-  affairs, and venture themselves upon uncertain ground in warlike
-  exploits.
-</p>
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+Cf. Nietzsches's <i>schaffender Mensch</i>: “Den Schaffenden hassen
+sie am meisten: den, der Tafeln bricht und alte Werthe, den
+Brecher - den heissen sie Verbrecher.” Zarathustra, §56.\par
+\par
+[They hate facient man the most: he who breaks
+tables and old values; the breaker: they nominate
+him law-breaker.]
+</p></div>
 
-
-<p class="footnote"><sup><a class="footnum" name="fn.5" href="#fnr.5">5</a></sup> It should be noted that Glenn Gould preferred georgical to
-  lucubratory.
-</p>
-
-
-<p class="footnote"><sup><a class="footnum" name="fn.6" href="#fnr.6">6</a></sup> Cf. Nietzsches's <i>schaffender Mensch</i>: “Den Schaffenden hassen
-  sie am meisten: den, der Tafeln bricht und alte Werthe, den
-  Brecher - den heissen sie Verbrecher.” Zarathustra, §56.</p ><p >
-  </p ><p >
-  [They hate facient man the most: he who breaks
-  tables and old values; the breaker: they nominate
-  him law-breaker.]
-</p>
-
-
-<p class="footnote"><sup><a class="footnum" name="fn.7" href="#fnr.7">7</a></sup> [a. L. <i>diurnalem</i> ] Diurnal. 1590 SPENSER F.Q. I. xi. 31
-  Phœbus..his faint steedes watred in Ocean deepe, Whiles from their
-  iournall labours they did rest.
-</p>
-
+<div class="footdef"><sup><a id="fn.7" name="fn.7" class="footnum" href="#fnr.7">7</a></sup> <p class="footpara">
+[a. L. <i>diurnalem</i> ] Diurnal. 1590 SPENSER F.Q. I. xi. 31
+Phœbus..his faint steedes watred in Ocean deepe, Whiles from their
+iournall labours they did rest.
+</p></div>
 
 
 </div>
-</div>
-</div>
-
+</div></div>
 </body>
 </html>
