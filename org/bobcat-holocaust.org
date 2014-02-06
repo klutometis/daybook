@@ -28,6 +28,6 @@ We’ve since provided him with a micro-harem, and he’s taken to
 shepardship with gusto; propagating his hens from plum-trees to grass
 to corn with a paternal rigour.
 
-#+CAPTION: Bewivèd cock (<a href="bewived-cock.jpg">high-res</a>)
+#+CAPTION: Bewivèd cock
 #+ATTR_HTML: class="figure"
-[[file:bewived-cock-small.jpg]]
+[[file:bewived-cock.jpg][file:bewived-cock-small.jpg]]

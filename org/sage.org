@@ -5,9 +5,9 @@ This self-replicating program written in 332Mb[fn:1] (or 1/14^{th} the
 size of Google’s codebase) was activated by invoking its =run=
 procedure; viz., the application of carbon-dioxide, water and photons.
 
-#+CAPTION: Self-replicating sage (<a href="sage.jpg">high-res</a>)
+#+CAPTION: Self-replicating sage
 #+ATTR_HTML: class="figure"
-[[file:sage-small.jpg]]
+[[file:sage.jpg][file:sage-small.jpg]]
 
 All the code I’ve written (or will write) approaches not the majesty
 of this seedling: this imperfect quine which produces approximate
