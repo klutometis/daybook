@@ -20,7 +20,7 @@ Howlat 235 Confess cleir can I nocht, nor kyth all the cass.
 Autobiog., etc. (1842) 180 Your tender King, and sweit native
 countrey, to be redde from the abbusars and misrewlares of the sam.
 
-[fn:4] The moral (argument) precedes l'envoy (conclusion):\par
+[fn:4] The moral (argument) precedes l'envoy (conclusion):
 #+BEGIN_QUOTE
 I will example it.\\
 \nbsp\nbsp The fox, the ape, and the humble-bee,\\
