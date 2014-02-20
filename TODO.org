@@ -1,3 +1,5 @@
+* TODO Consider 3.5px letter-spacing in h1; 3px letter-spacing in h2.
+  Looks good in conkeror, not-good in chrome.
 * TODO So you want to write a SAT-solver?
 * TODO Blog on: scrabble, constraint satisfaction, oral history and documentation.
   With constraint satisfaction vs. SAT solvers, the latter can’t have
