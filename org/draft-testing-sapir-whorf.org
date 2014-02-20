@@ -1,0 +1,37 @@
+Heh: get some Lispers and a C-gurus in a room and ask them to solve
+the (n^2 - 1)-puzzle-problem.
+
+I wager that the probability of at least one C-guru employing
+gratuitous bit-packing for representing the puzzle approaches 1;
+whereas it wouldn’t surprise me if at least one Lisper wrote a
+reader-macro to do the same thing.
+
+Seriously, though; take something like Google’s Grok, which Steve
+Yegge describes here as “cross-language source analysis:”
+
+  http://www.youtube.com/watch?v=KTJs-0EInW8
+
+They’ve identified certain common language abstractions across C++,
+Python, Java, Go, Lisp, etc.; and they scour large cobases, indexing
+these abstractions.
+
+Taking a look at those statistics gives you a Sapir-Whorf of grammar,
+answering the question: “what things do programmers in a given
+language prefer to think in?”
+
+Answering the question, “what things do programmers in a given
+language prefer to think about?”, or a Sapir-Whorf of semantics
+(probably a more interesting question), is probably a little more
+difficult.
+
+One interesting thing would be to do some sort of semantic clustering
+on GitHub projects, where Github also keeps language statistics; and
+see if there are any interesting interaction.
+
+SourceForge also used to maintain a software-map based on Trove, if I
+remember correctly; which could also be correlated with language.
+
+> “The language you program with shapes and limits the solutions you
+  can formulate. “
+> How would one go about testing this hypothesis?
+> Michael.
