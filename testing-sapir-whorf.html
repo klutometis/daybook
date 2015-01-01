@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>klutometis’ daybook</title>
+<title>Testing Sapir-Whorf</title>
 <!-- 2015-01-01 Thu 08:50 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
@@ -138,77 +138,70 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">klutometis’ daybook</h1>
-<table rules="none" frame="void" cellpadding="6" class="toc">
+<h1 class="title">Testing Sapir-Whorf</h1>
+<blockquote>
+<p>
+“The language you program with shapes and limits the solutions you
+can formulate.”
+</p>
 
+<p>
+How would one go about testing this hypothesis? —<a href="http://piagetmodeler.tumblr.com/">Michael</a>
+</p>
+</blockquote>
 
-<colgroup>
-<col  class="left" />
+<p>
+Heh: get some Lispers and a C-gurus in a room and ask them to solve
+the <a href="http://en.wikipedia.org/wiki/15_puzzle">(n<sup>2</sup> - 1)-puzzle-problem</a>.
+</p>
 
-<col  class="left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="left"><a href="the-day-hal-came.html">The day Hal came</a></td>
-<td class="left">01 January ‘15</td>
-</tr>
+<p>
+I wager that the probability of at least one C-guru employing
+gratuitous bit-packing for representing the puzzle approaches 1;
+whereas it wouldn’t surprise me if at least one Lisper wrote a
+reader-macro to do the same thing.
+</p>
 
-<tr>
-<td class="left"><a href="testing-sapir-whorf.html">Testing Sapir-Whorf</a></td>
-<td class="left">20 February ‘14</td>
-</tr>
+<p>
+Seriously, though; take something like Google’s Grok, which Steve
+Yegge describes here as “cross-language source analysis:”
+</p>
 
-<tr>
-<td class="left"><a href="sage.html">Sage</a></td>
-<td class="left">03 February ‘14</td>
-</tr>
+<blockquote>
+<p>
+<a href="http://www.youtube.com/watch?v=KTJs-0EInW8">http://www.youtube.com/watch?v=KTJs-0EInW8</a>
+</p>
+</blockquote>
 
-<tr>
-<td class="left"><a href="non-deterministic-navigation.html">Non-deterministic navigation</a></td>
-<td class="left">05 April ‘13</td>
-</tr>
+<p>
+They’ve identified certain common language abstractions across C++,
+Python, Java, Go, Lisp, etc.; and they scour large codebases, indexing
+these abstractions.
+</p>
 
-<tr>
-<td class="left"><a href="online-depth-first-search.html">Online depth-first-search</a></td>
-<td class="left">27 February ‘13</td>
-</tr>
+<p>
+Taking a look at those statistics gives you a Sapir-Whorf of grammar,
+answering the question: “what things do programmers in a given
+language prefer to think in?”
+</p>
 
-<tr>
-<td class="left"><a href="old-bookstore.html">Old bookstore</a></td>
-<td class="left">18 February ‘13</td>
-</tr>
+<p>
+Answering the question, “what things do programmers in a given
+language prefer to think about?”, or a Sapir-Whorf of semantics
+(probably a more interesting question), is probably a little more
+difficult.
+</p>
 
-<tr>
-<td class="left"><a href="bobcat-holocaust.html">The bobcat holocaust</a></td>
-<td class="left">13 February ‘13</td>
-</tr>
+<p>
+One interesting thing would be to do some sort of semantic clustering
+on GitHub projects, where Github also keeps language statistics; and
+see if there are any interesting interaction.
+</p>
 
-<tr>
-<td class="left"><a href="extending-once-twice-thrice.html">Extending “once, twice, thrice”</a></td>
-<td class="left">29 January ‘13</td>
-</tr>
-
-<tr>
-<td class="left"><a href="lucubration.html">Lucubration</a></td>
-<td class="left">04 May ‘08</td>
-</tr>
-
-<tr>
-<td class="left"><a href="bombuliophobia.html">Bombuliophobia</a></td>
-<td class="left">04 September ‘07</td>
-</tr>
-
-<tr>
-<td class="left"><a href="language.html">Language</a></td>
-<td class="left">09 July ‘07</td>
-</tr>
-
-<tr>
-<td class="left"><a href="procedure.html">Procedure</a></td>
-<td class="left">08 July ‘07</td>
-</tr>
-</tbody>
-</table>
+<p>
+SourceForge also used to maintain a software-map based on Trove, if I
+remember correctly; which could also be correlated with language.
+</p>
 </div>
 </body>
 </html>
