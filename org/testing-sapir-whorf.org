@@ -1,5 +1,15 @@
+#+TITLE: Testing Sapir-Whorf
+#+DATE: <2014-02-20>
+
+#+BEGIN_QUOTE
+“The language you program with shapes and limits the solutions you
+can formulate.”
+
+How would one go about testing this hypothesis? —[[http://piagetmodeler.tumblr.com/][Michael]]
+#+END_QUOTE
+
 Heh: get some Lispers and a C-gurus in a room and ask them to solve
-the (n^2 - 1)-puzzle-problem.
+the [[http://en.wikipedia.org/wiki/15_puzzle][(n^2 - 1)-puzzle-problem]].
 
 I wager that the probability of at least one C-guru employing
 gratuitous bit-packing for representing the puzzle approaches 1;
@@ -9,7 +19,9 @@ reader-macro to do the same thing.
 Seriously, though; take something like Google’s Grok, which Steve
 Yegge describes here as “cross-language source analysis:”
 
-  http://www.youtube.com/watch?v=KTJs-0EInW8
+#+BEGIN_QUOTE
+http://www.youtube.com/watch?v=KTJs-0EInW8
+#+END_QUOTE
 
 They’ve identified certain common language abstractions across C++,
 Python, Java, Go, Lisp, etc.; and they scour large codebases, indexing
@@ -30,8 +42,3 @@ see if there are any interesting interaction.
 
 SourceForge also used to maintain a software-map based on Trove, if I
 remember correctly; which could also be correlated with language.
-
-> “The language you program with shapes and limits the solutions you
-  can formulate.”
-> How would one go about testing this hypothesis?
-> Michael.
