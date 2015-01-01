@@ -3,7 +3,7 @@
 
 [[http://en.wikipedia.org/wiki/Hal_Abelson][Hal Abelson]] stopped by the day we inaugurated our [[http://sicp.csrg.org/][SICP reading group]].
 
-#+CAPTION: Hal crashed our reading group.
+#+CAPTION: Hal crashing our reading group
 #+ATTR_HTML: class="figure"
 [[file:hal.jpg][file:hal-small.jpg]]
 
