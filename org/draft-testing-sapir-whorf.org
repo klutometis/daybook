@@ -12,7 +12,7 @@ Yegge describes here as “cross-language source analysis:”
   http://www.youtube.com/watch?v=KTJs-0EInW8
 
 They’ve identified certain common language abstractions across C++,
-Python, Java, Go, Lisp, etc.; and they scour large cobases, indexing
+Python, Java, Go, Lisp, etc.; and they scour large codebases, indexing
 these abstractions.
 
 Taking a look at those statistics gives you a Sapir-Whorf of grammar,
@@ -32,6 +32,6 @@ SourceForge also used to maintain a software-map based on Trove, if I
 remember correctly; which could also be correlated with language.
 
 > “The language you program with shapes and limits the solutions you
-  can formulate. “
+  can formulate.”
 > How would one go about testing this hypothesis?
 > Michael.

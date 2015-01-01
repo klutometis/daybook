@@ -1,0 +1,25 @@
+#+TITLE: The day Hal came
+#+DATE: <2015-01-01>
+
+[[http://en.wikipedia.org/wiki/Hal_Abelson][Hal Abelson]] stopped by the day we inaugurated our [[http://sicp.csrg.org/][SICP reading group]].
+
+#+CAPTION: Hal crashed our reading group.
+#+ATTR_HTML: class="figure"
+[[file:hal.jpg][file:hal-small.jpg]]
+
+I wish we could have recorded the session; off the top of my head,
+though, we touched on a few talking points:
+
+- “Amb” was a McCarthyesque back-tracking apparatus that they stuck
+  “in the guts of the language.”
+- They had considered first-class irrationals like pi; the question
+  is, what do you compute on such things?
+- Linguistic programming is key; the idea where you think primarily
+  about what sort of language you want to think in, then implement it.
+- Should they have done more with the object-oriented stuff in chapter
+  3?
+- SICP is about peeling away successive layers of magic, until you
+  have a full mental model for how (+ 2 2) computes 4.
+- There is a lot you can do with functional decomposition.
+- Math was a way to “sell” SICP to MIT-frosh; nowadays, calculus seems
+  to scare people away.
