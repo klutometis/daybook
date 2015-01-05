@@ -13,6 +13,14 @@ body {
     font-size: 21px;
 }
 
+pre, code {
+    font-family: 'Inconsolata', monospace;
+}
+
+code {
+    font-size: 18px;
+}
+
 img {
     max-width: 100%;
 }
