@@ -19,7 +19,7 @@ though, we touched on a few talking points:
 - Should they have done more with the object-oriented stuff in chapter
   3?
 - SICP is about peeling away successive layers of magic, until you
-  have a full mental model for how (+ 2 2) computes 4.
+  have a full mental model for how =(+ 2 2)= computes 4.
 - There is a lot you can do with functional decomposition.
 - Math was a way to “sell” SICP to MIT-frosh; nowadays, calculus seems
   to scare people away.

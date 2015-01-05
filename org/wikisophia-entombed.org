@@ -1,0 +1,67 @@
+#+TITLE: Wikisophia, entombed
+#+DATE: <2015-01-05>
+#+OPTIONS: toc:nil num:nil
+
+It turns out that creating a static version of a MediaWiki instance is
+[[http://www.mediawiki.org/wiki/Extension:DumpHTML][non-trivial]]; who knew? This is due, in part, to [[http://www.mediawiki.org/wiki/ResourceLoader][ResourceLoader]] and
+other performance-hacks.
+
+There is nothing a little [[http://camwebb.info/blog/2012-12-20/][recursive =wget=]] can’t fix, of course; but
+the problem is that naïve =wget= produces files of the form:
+
+#+BEGIN_EXAMPLE
+load.php?modules=jquery.client&version=20150104T015506Z&*
+#+END_EXAMPLE
+
+which Apache will never match, since they look like a base-file plus
+[[http://en.wikipedia.org/wiki/Query_string][query-string]].
+
+One clever mechanism for dealing with pseudo-query-string filenames is
+to rewrite the query-delimiter as [[http://stackoverflow.com/a/4033561][=%3F=]]:[fn:1]
+
+#+BEGIN_SRC apache
+  RewriteCond %{QUERY_STRING} !=""
+  RewriteRule ^(.*)$ $1\%3f%{QUERY_STRING} [L]
+#+END_SRC
+
+Since the underlying files appear to lack extensions, however, Apache
+will serve them as e.g. =text/html=;[fn:2] which browers refuse to
+interpret as, say, CSS and JavaScript.
+
+We can employ a little [[http://www.mediawiki.org/wiki/Thread:Project:Support_desk/CSS_is_not_loading_properly/reply_(2)][rewrite- and =mod_header=-trickery]] to serve
+them with appropriate MIME-types:
+
+#+BEGIN_SRC apache
+  RewriteCond %{QUERY_STRING} only=styles
+  RewriteRule ^load.php - [QSA,E=content_type:text/css]
+
+  RewriteCond %{QUERY_STRING} only=scripts
+  RewriteRule ^load.php - [QSA,E=content_type:text/javascript]
+
+  RewriteCond %{QUERY_STRING} modules=jquery
+  RewriteRule ^load.php - [QSA,E=content_type:text/javascript]
+
+  <FilesMatch "load\.php">
+          Header set Content-type %{content_type}e
+  </FilesMatch>
+#+END_SRC
+
+[[http://wikisophia.org/][Voilà]]! A static MediaWiki instance with a little breakage here and
+there; but, in the main, functional.
+
+** Motivation
+
+The motivation for this was that [[http://wikisophia.org/][Wikisophia]] used to be a showcase for
+[[http://wikitex.org/][WikiTeX]] and [[http://modtex.org/][=mod_tex=]]; it never fully recovered, however, from the
+great server meltdown of 2012.
+
+Since the code, furthermore, suffered from complexity and bitrot; it
+seemed like a good idea to get it working one last time and take a
+snapshot for posterity.
+
+* Footnotes
+
+[fn:1] I also took the extra step of URL-decoding the filenames; but I
+wonder if this couldn’t have been solved by using [[http://serverfault.com/a/276755][noescape]].
+
+[fn:2] Or whatever the =DefaultType= happens to be

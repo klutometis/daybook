@@ -1,0 +1,16 @@
+#+TITLE: klutometis’ daybook
+
+#+ATTR_HTML: :frame void :rules none :class toc
+| [[file:wikisophia-entombed.org][Wikisophia, entombed]] | 05 January ‘15 |
+| [[file:the-day-hal-came.org][The day Hal came]] | 01 January ‘15 |
+| [[file:testing-sapir-whorf.org][Testing Sapir-Whorf]] | 20 February ‘14 |
+| [[file:sage.org][Sage]] | 03 February ‘14 |
+| [[file:non-deterministic-navigation.org][Non-deterministic navigation]] | 05 April ‘13 |
+| [[file:online-depth-first-search.org][Online depth-first-search]] | 27 February ‘13 |
+| [[file:old-bookstore.org][Old bookstore]] | 18 February ‘13 |
+| [[file:bobcat-holocaust.org][The bobcat holocaust]] | 13 February ‘13 |
+| [[file:extending-once-twice-thrice.org][Extending “once, twice, thrice”]] | 29 January ‘13 |
+| [[file:lucubration.org][Lucubration]] | 04 May ‘08 |
+| [[file:bombuliophobia.org][Bombuliophobia]] | 04 September ‘07 |
+| [[file:language.org][Language]] | 09 July ‘07 |
+| [[file:procedure.org][Procedure]] | 08 July ‘07 |
