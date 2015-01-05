@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>The day Hal came</title>
-<!-- 2015-01-01 Thu 09:45 -->
+<title>Wikisophia, entombed</title>
+<!-- 2015-01-05 Mon 08:48 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Peter Danenberg" />
@@ -138,45 +138,103 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">The day Hal came</h1>
+<h1 class="title">Wikisophia, entombed</h1>
 <p>
-<a href="http://en.wikipedia.org/wiki/Hal_Abelson">Hal Abelson</a> stopped by the day we inaugurated our <a href="http://sicp.csrg.org/">SICP reading group</a>.
+It turns out that creating a static version of a MediaWiki instance is
+<a href="http://www.mediawiki.org/wiki/Extension:DumpHTML">non-trivial</a>; who knew? This is due, in part, to <a href="http://www.mediawiki.org/wiki/ResourceLoader">ResourceLoader</a> and
+other performance-hacks.
 </p>
 
-
-<div class="figure">
-<p><a href="hal.jpg"><img src="hal-small.jpg" alt="hal-small.jpg" /></a>
+<p>
+There is nothing a little <a href="http://camwebb.info/blog/2012-12-20/">recursive <code>wget</code></a> can’t fix, of course; but
+the problem is that naïve <code>wget</code> produces files of the form:
 </p>
-<p><span class="figure-number">Figure 1:</span> Hal crashing our reading group</p>
+
+<pre class="example">
+load.php?modules=jquery.client&amp;version=20150104T015506Z&amp;*
+</pre>
+
+<p>
+which Apache will never match, since they look like a base-file plus
+<a href="http://en.wikipedia.org/wiki/Query_string">query-string</a>.
+</p>
+
+<p>
+One clever mechanism for dealing with pseudo-query-string filenames is
+to rewrite the query-delimiter as <a href="http://stackoverflow.com/a/4033561"><code>%3F</code></a>:<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-apache"><span class="org-keyword">RewriteCond</span> %{QUERY_STRING} !=<span class="org-string">""</span>
+<span class="org-keyword">RewriteRule</span> ^(.*)$ $1\%3f%{QUERY_STRING} [L]
+</pre>
 </div>
 
 <p>
-I wish we could have recorded the session; off the top of my head,
-though, we touched on a few talking points:
+Since the underlying files appear to lack extensions, however, Apache
+will serve them as e.g. <code>text/html</code>;<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> which browers refuse to
+interpret as, say, CSS and JavaScript.
 </p>
 
-<ul class="org-ul">
-<li>“Amb” was a McCarthyesque back-tracking apparatus that they stuck
-“in the guts of the language.”
-</li>
-<li>They had considered first-class irrationals like pi; the question
-is, what do you compute on such things?
-</li>
-<li>Linguistic programming is key; the idea where you think primarily
-about what sort of language you want to think in, then implement it.
-</li>
-<li>Should they have done more with the object-oriented stuff in chapter
-3?
-</li>
-<li>SICP is about peeling away successive layers of magic, until you
-have a full mental model for how <code>(+ 2 2)</code> computes 4.
-</li>
-<li>There is a lot you can do with functional decomposition.
-</li>
-<li>Math was a way to “sell” SICP to MIT-frosh; nowadays, calculus seems
-to scare people away.
-</li>
-</ul>
+<p>
+We can employ a little <a href="http://www.mediawiki.org/wiki/Thread:Project:Support_desk/CSS_is_not_loading_properly/reply_(2)">rewrite- and <code>mod_header</code>-trickery</a> to serve
+them with appropriate MIME-types:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-apache"><span class="org-keyword">RewriteCond</span> %{QUERY_STRING} only=styles
+<span class="org-keyword">RewriteRule</span> ^load.php - [QSA,E=content_type:text/css]
+
+<span class="org-keyword">RewriteCond</span> %{QUERY_STRING} only=scripts
+<span class="org-keyword">RewriteRule</span> ^load.php - [QSA,E=content_type:text/javascript]
+
+<span class="org-keyword">RewriteCond</span> %{QUERY_STRING} modules=jquery
+<span class="org-keyword">RewriteRule</span> ^load.php - [QSA,E=content_type:text/javascript]
+
+&lt;<span class="org-function-name">FilesMatch</span> <span class="org-string">"load\.php"</span>&gt;
+        <span class="org-keyword">Header</span> <span class="org-type">set</span> Content-type %{content_type}e
+&lt;/<span class="org-function-name">FilesMatch</span>&gt;
+</pre>
 </div>
+
+<p>
+<a href="http://wikisophia.org/">Voilà</a>! A static MediaWiki instance with a little breakage here and
+there; but, in the main, functional.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Motivation</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The motivation for this was that <a href="http://wikisophia.org/">Wikisophia</a> used to be a showcase for
+<a href="http://wikitex.org/">WikiTeX</a> and <a href="http://modtex.org/"><code>mod_tex</code></a>; it never fully recovered, however, from the
+great server meltdown of 2012.
+</p>
+
+<p>
+Since the code, furthermore, suffered from complexity and bitrot; it
+seemed like a good idea to get it working one last time and take a
+snapshot for posterity.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+I also took the extra step of URL-decoding the filenames; but I
+wonder if this couldn’t have been solved by using <a href="http://serverfault.com/a/276755">noescape</a>.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+Or whatever the <code>DefaultType</code> happens to be
+</p></div>
+
+
+</div>
+</div></div>
 </body>
 </html>
