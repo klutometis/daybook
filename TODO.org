@@ -266,6 +266,9 @@
   On the other hand: it's nice to make a break, isn't it? Old shit is
   vaguely oppressive.
 * TODO Think about [[http://www.waldenfont.com/][Walden fonts]] for titles.
+* DONE Find a better monospace that goes with Cardo.
+  CLOSED: [2015-01-05 Mon 08:51]
+  [[http://awesome-fontstacks.com/stacks/211,211,211][Interesting]]! Let’s try [[http://www.google.com/fonts/specimen/Inconsolata][Inconsolata]].
 * DONE MathJax disappears in Firefox
   CLOSED: [2013-09-26 Thu 01:41]
 * DONE Directory structure with dates?
