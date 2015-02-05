@@ -1,6 +1,7 @@
 #+TITLE: klutometis’ daybook
 
 #+ATTR_HTML: :frame void :rules none :class toc
+| [[file:book-of-inflaton.org][The book of inflaton (sic)]] | 05 February ‘15 |
 | [[file:wikisophia-entombed.org][Wikisophia, entombed]] | 05 January ‘15 |
 | [[file:the-day-hal-came.org][The day Hal came]] | 01 January ‘15 |
 | [[file:testing-sapir-whorf.org][Testing Sapir-Whorf]] | 20 February ‘14 |
