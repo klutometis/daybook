@@ -1,0 +1,18 @@
+#+TITLE: The book of inflaton (sic)
+#+DATE: <2015-02-05>
+
+Whoever owns the [[http://en.wikipedia.org/wiki/Inflaton][inflaton field]] whence our visible patch of universe
+sprang was nice enough to install [[http://en.wikipedia.org/wiki/Uncertainty_principle][Heisenberg uncertainty]], so that the
+experiment doesn’t run deterministically—a little stochastic wasabi
+with our universal roll.
+
+Or, as [[http://mattcrain.com/][Matt Crain]] said, Heisenberg uncertainty is an artifact of
+floating-point imprecision; exactly! The Book of Inflaton should
+contain a Gospel of Floating Point.
+
+“[[http://en.wikipedia.org/wiki/Property_is_theft!][Property is theft]],” because we’re residing upon and working a parcel
+within our inflaton-lord’s manor; which lord, in turn, answers to the
+singularity’s crown.
+
+Who is the singularity’s crown? Physics asymptotically approaches the
+answer, but only as far as the [[http://en.wikipedia.org/wiki/Planck_epoch][Planck epoch]].
