@@ -3,7 +3,7 @@
 Artist
 
 The artist looks at nature; imprints the same on his neurons; and
-turns to the canvas to exhaust his impression.[fn:1][fn:2]
+turns to the canvas to exhaust his impression.[fn:1]
 
 The heroic algorithmist did the same with [[http://en.wikipedia.org/wiki/Simulated_annealing][metallurgy]], [[http://en.wikipedia.org/wiki/Genetic_algorithm][genetics]] and
 [[http://en.wikipedia.org/wiki/Neural_network][neurology]].
@@ -14,8 +14,3 @@ This is, more generally, [[http://en.wikipedia.org/wiki/Natural_computing][natur
 
 [fn:1] See the Greek apo..., a word Plato used for drawing, which
   expresses the same thing.
-
-[fn:2] What’s interesting, too, is that the feminine projection of
-  body-morphology tends to be distributed differently than the
-  masculine; the former: face, hair, eyes; the latter: ratio of tits,
-  ass, hips.
