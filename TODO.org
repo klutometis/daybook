@@ -1,5 +1,5 @@
 * TODO Check out Medium’s typography.
-  See [[https://medium.com/@mwichary/death-to-typewriters-technical-supplement-8f3c754626f2][here]].
+  See [[https://medium.com/@mwichary/death-to-typewriters-technical-supplement-8f3c754626f2][here]]; and [[http://practicaltypography.com/][here]].
 * TODO Consider 3.5px letter-spacing in h1; 3px letter-spacing in h2.
   Looks good in conkeror, not-good in chrome.
 * TODO So you want to write a SAT-solver?
