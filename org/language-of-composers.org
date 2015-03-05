@@ -1,0 +1,17 @@
+#+TITLE: The language of composers
+#+DATE: <2015-03-05>
+
+It’s interesting to me that one seems to acquire techinacl facilities
+“for free” by learning the language of a composer; when I started the
+Well-Tempered Clavier, for instance, some of the fugues were beyond me
+but seemed to become more tractable as time went by.
+
+In that sense, I think there’s an argument for starting from the first
+e.g. nocturne and working through; similarly, the Beethoven sonatas
+seem to have a linear progression: tricks learned from previous
+sonatas are applicable to subsequent ones.
+
+Maybe that’s why people (myself included) have such a hard time
+jumping straight into subsequent movements of the Moonlight, /et
+similia/: there are entire libraries missing from their project file,
+so to speak.

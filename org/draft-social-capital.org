@@ -1,0 +1,36 @@
+#+TITLE: Social capital and revenue
+#+DATE: <2015-03-05>
+
+There are [[http://www2.ed.gov/rschstat/eval/other/single-sex/index.html][some studies]] which suggest that single-sex education is
+beneficial (as well as others that show no difference and still others
+which favor co-ed education); however:
+
+#+BEGIN_QUOTE
+The preponderance of studies in areas such as academic accomplishment
+(both concurrent and long term) and adaptation or socioemotional
+development (both concurrent and long term) yields results lending
+support to SS schooling.
+#+END_QUOTE
+
+On the other hand:
+
+#+BEGIN_QUOTE
+There is a dearth of quality studies (i.e., randomized experiments or
+correlational studies with adequate statistical controls) across all
+outcomes.
+#+END_QUOTE
+
+This led me to wonder whether similar studies have been conducted in
+the workplace; interestingly, [[http://economics.mit.edu/files/8851][an MIT study]] found that people were more
+productive but less social in a co-ed environment:
+
+#+BEGIN_QUOTE
+Our first set of results suggests that gender diversity could have
+detrimental impacts on the formation of firm social capital, but the
+revenue results suggest that whatever impacts it had were outweighed
+or at least canceled by the direct contribution of gender diversity in
+the office.
+#+END_QUOTE
+
+Is there a certain amount of inevitable tension in the co-ed workplace
+which is nevertheless compensated for by increased productivity?
