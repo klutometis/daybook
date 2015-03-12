@@ -1,0 +1,18 @@
+#+TITLE: Cleromancy or promote randomly!
+#+DATE: <2015-03-12>
+
+Have you heard of [[http://arxiv.org/pdf/0907.0455v3.pdf][this study]], by the way, where Pluchino, et al. found
+that promoting people randomly is optimal?
+
+#+BEGIN_QUOTE
+Within a game theory-like approach, we explore different promotion
+strategies and we find, counterintuitively, that . . . the best ways
+for improving the efficiency of a given organization are either to
+promote each time an agent at random or to promote randomly the best
+and the worst members in terms of competence.
+#+END_QUOTE
+
+This assumes that the [[http://en.wikipedia.org/wiki/Peter_Principle][Peter Principle]] holds.
+
+I wonder what Google looks like in a parallel universe in which promo
+committees have been replaced by [[http://en.wikipedia.org/wiki/Cleromancy][cleromancy]]?
